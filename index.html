@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>éæ¥çéîå§éæ¨ºî¬é°å©å¢¦é?/title>
+<title>鍗楁矙鍏姟鍛樺鑰冩墦鍗?/title>
 <style>
 :root {
   --primary: #1a73e8;
@@ -49,7 +49,7 @@ body {
 .tab-content { display: none; padding: 14px; max-width: 720px; margin: 0 auto; }
 .tab-content.active { display: block; }
 
-/* çâæ¤å¨´î½æ½¯ */
+/* 璁℃椂娴潯 */
 .timer-bar {
   position: fixed; top: var(--header-height); left: 0; right: 0; z-index: 99;
   background: #1a1a2e; color: #fff; padding: 8px 16px;
@@ -65,7 +65,7 @@ body {
   border-radius: 16px; font-size: 12px; font-weight: 600; cursor: pointer;
 }
 
-/* æ´æ¢å´çµè°å - 4æ¶çab */
+/* 搴曢儴瀵艰埅 - 4涓猅ab */
 .bottom-nav {
   position: fixed; bottom: 0; left: 0; right: 0; height: var(--nav-height);
   background: var(--card); border-top: 1px solid var(--border);
@@ -79,7 +79,7 @@ body {
 .nav-item.active { color: var(--primary); font-weight: 600; }
 .nav-item .nav-icon { font-size: 19px; }
 
-/* éï¼å¢ */
+/* 鍗＄墖 */
 .card {
   background: var(--card); border-radius: var(--radius);
   padding: 16px; margin-bottom: 12px; box-shadow: var(--shadow);
@@ -91,7 +91,7 @@ body {
 }
 .card-title .icon { font-size: 19px; }
 
-/* æµ è¯²å§éæ¥ã */
+/* 浠诲姟鍒楄〃 */
 .task-section { margin-bottom: 12px; }
 .task-section-label {
   font-size: 12px; font-weight: 600; color: var(--primary);
@@ -136,7 +136,7 @@ body {
 }
 .task-duration-tag.visible { display: inline; }
 
-/* çâæ¤é¸å¤æ³ */
+/* 璁℃椂鎸夐挳 */
 .timer-btn {
   padding: 5px 12px; border-radius: 16px; font-size: 11px;
   font-weight: 600; cursor: pointer; border: none; white-space: nowrap;
@@ -158,7 +158,7 @@ body {
   50% { opacity: 0.3; }
 }
 
-/* ç¼ç»î¸éã¡æ¾ */
+/* 缁熻闈㈡澘 */
 .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
 .stat-card {
   background: var(--card); border-radius: var(--radius); padding: 14px 10px;
@@ -181,7 +181,7 @@ body {
 .module-bar-track { height: 8px; background: #e8ecf1; border-radius: 4px; overflow: hidden; }
 .module-bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s ease; }
 
-/* ===== çè®³åçâ³åéå³°ç´¡ ===== */
+/* ===== 璇讳功璁″垝鏍峰紡 ===== */
 .reading-stats-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 12px; }
 .reading-stat-card {
   background: var(--card); border-radius: var(--radius); padding: 14px;
@@ -241,7 +241,7 @@ body {
 .book-read-btn.stop-btn { background: #e54545; color: #fff; animation: pulse 1.5s infinite; }
 .book-read-btn.stop-btn .live-dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: #fff; margin-right: 3px; animation: blink 0.8s infinite; }
 
-/* éè¤æTab */
+/* 鏀荤暐Tab */
 .guide-section { margin-bottom: 16px; }
 .guide-section h3 {
   font-size: 15px; font-weight: 600; margin-bottom: 8px;
@@ -274,7 +274,7 @@ body {
 }
 .toast.show { opacity: 1; }
 
-/* éã¦æ¹¡çµè°å */
+/* 鏃ユ湡瀵艰埅 */
 .date-nav { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .date-nav .date-display { font-size: 14px; font-weight: 600; flex: 1; text-align: center; }
 .date-nav .nav-arrow {
@@ -290,7 +290,7 @@ body {
   padding: 12px; margin: 10px 0; font-size: 12px; line-height: 1.7;
 }
 
-/* éå¶ç°²å¯®?*/
+/* 鍝嶅簲寮?*/
 @media (min-width: 600px) {
   .tab-content { padding: 18px 22px; }
   .stat-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
@@ -301,119 +301,119 @@ body {
 </head>
 <body>
 
-<!-- æ¤¤å å´ -->
+<!-- 椤堕儴 -->
 <div class="header">
-  <h1>éæ¥çéîå§éæ¨ºî¬é°å©å¢¦é?/h1>
-  <div class="streak-badge"><span class="fire">é¦æ</span> æ©çµç» <span id="streakCount">0</span> æ¾¶?/div>
+  <h1>鍗楁矙鍏姟鍛樺鑰冩墦鍗?/h1>
+  <div class="streak-badge"><span class="fire">馃敟</span> 杩炵画 <span id="streakCount">0</span> 澶?/div>
 </div>
 
-<!-- çâæ¤å¨´î½æ½¯ -->
+<!-- 璁℃椂娴潯 -->
 <div class="timer-bar" id="timerBar">
   <div>
     <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#4caf50;margin-right:6px;animation:blink 0.8s infinite;"></span>
-    <span class="timer-task" id="timerTaskName">æµ è¯²å§é?/span>
+    <span class="timer-task" id="timerTaskName">浠诲姟鍚?/span>
   </div>
   <div class="timer-display" id="timerDisplay">00:00</div>
-  <button class="timer-stop-btn" onclick="stopTimer()">ç¼æ´æ½«çâæ¤</button>
+  <button class="timer-stop-btn" onclick="stopTimer()">缁撴潫璁℃椂</button>
 </div>
 
 <div id="toast" class="toast"></div>
 
-<!-- Tab 1: æµ å©æ£©éµæ³å´± -->
+<!-- Tab 1: 浠婃棩鎵撳崱 -->
 <div class="tab-content active" id="tab-checkin">
   <div class="date-nav">
-    <div class="nav-arrow" onclick="shiftDate(-1)">é¼â¬</div>
+    <div class="nav-arrow" onclick="shiftDate(-1)">鈼€</div>
     <div class="date-display" id="dateDisplay"></div>
-    <div class="nav-arrow" onclick="shiftDate(1)">é»?/div>
+    <div class="nav-arrow" onclick="shiftDate(1)">鈻?/div>
   </div>
   <div id="taskContainer"></div>
 </div>
 
-<!-- Tab 2: æ¾¶åªâ¬å©æ¾é£?-->
+<!-- Tab 2: 澶囪€冩敾鐣?-->
 <div class="tab-content" id="tab-guide">
   <div class="card guide-section">
-    <h3>é¦æ çå±¾ç¥´æµæ¿ãå¦¯â³æ½¡ç»æ «æ</h3>
-    <h4>1. ç·â¬çî æçï½ç¬çã¨æªéå ¢å®³30æ£°æ©ç´</h4>
-    <p>éç¨¿ç¸¾éæ°¶â¬æç·«æ¿î¤âé¶æ¹î¢æ¾§å¿ç´æîå§/é«æç¹/éªè·ºåªéå¤ç´éå¨îéå°î°é¶æ²å¯éã¥å½éå ¥î»çæ§å½éä½½æµé¶æ¨ºæéå¤â¬åç¡æ¾¶âæ½¥é¸?0æ£°æ©ç´ç»îç®æ¥æ©î¶é´æ¯î¢300ç¼å©â¬?/p>
-    <h4>2. éãæéºã§æéå ¢å®³35æ£°æ©ç´</h4>
-    <p>é¥æ§è°éºã§æéç»îæµ£å¶ç/éå³°ç´¡/éä¼´åºçå«ç·¥éæ¶ç¾æ¶å¤å½éîå§éæ½æ­çä½·æ¬¢éæ¶è¢«å§£æå¸¹éåæå¨å°çéæå§ç»¯ä¼ç´±é«æç·«éãæéºå±¾å½éç²å·±éå©æ¥éîç´¡éåå¸¹é½æ¯å§³é¢ç·å´æ¶å¤æ®éãææµ£æ¶é´é?/p>
-    <h4>3. éä¼´åºéå´é´éå ¢å®³10-15æ£°æ©ç´</h4>
-    <p>éªå¤¸ç¬¢éä¼´åºéå¿çéæªç´é²å¶å£ç»ä½ºç¬å®¸ã§â¼éîî½éä½½îç»å¬®æ£¶æ£°æ¨¸â¬ä½¸åå¨ï¹æ£¶æ£°æ¨¸â¬ä½¹å¸éæ¥ç²éå â¬åå¸é»â²å¬éã¦å¸éãâ¬ä½¹æç»å¬«ç¡¶éä½½ç¥´éå¼ç¡¶éåæ´°éå·ç´°10æ£°æ¨ºî®7æ£°æ¨ºåµéî¤ç´æ¶å¶äº±é´æ¨¸â¬?/p>
-    <h4>4. ç§å¬æ¡éåç½éå ¢å®³15-20æ£°æ©ç´</h4>
-    <p>éâ³ç¹é·æå¼§éåÄé§æ¥ç´éç»îé©çæ¹¡/éçæ¹¡/æ¾§çºæ±é?å§£æå¸/éªå²æ½éæ¿åå¯®å¿â¬åâ¬çºç»é¶â¬å®¸Ñç´°é´îç¶é©æ®æ«éä½ºå£å¯°ä½¹æçæ¥ç¡¶éä½¸æ¨éåç¡¶éåç¡æ¾¶?æ¿æ¥î¸éæ°îç¼å¿ç´é©î½ç£25éåæéå­ç¬é´æ©â¬?/p>
-    <h4>5. ç¯æ­çéãæéå ¢å®³15æ£°æ©ç´</h4>
-    <p>éèµææ¶è½°å¯+å¨æç·¥+ç»æå¦§+éå§å½¶éåç¡æ¾¶âæ«ç?0éåæéèµæéå îæ¶ç²å·±é¥?æµçç¯éã¦å§¤éå¤ç´éæ¥çéçåè¹å°â¬å¿ç´é·îé¤éçæç»æ ¥â¬ä½¸ãå©æ§å°¯çå«åéå¤â¬?/p>
+    <h3>馃摌 琛屾祴浜斿ぇ妯″潡绛栫暐</h3>
+    <h4>1. 瑷€璇悊瑙ｄ笌琛ㄨ揪锛堢害30棰橈級</h4>
+    <p>鏍稿績锛氶€昏緫濉┖鎶撹澧冿紙杞姌/閫掕繘/骞跺垪锛夛紝鐗囨闃呰鎶撲富鏃ㄥ彞锛堥灏惧彞銆佽浆鎶樺悗锛夈€傛瘡澶╁潥鎸?0棰橈紝绉疮楂橀鎴愯300缁勩€?/p>
+    <h4>2. 鍒ゆ柇鎺ㄧ悊锛堢害35棰橈級</h4>
+    <p>鍥惧舰鎺ㄧ悊鐔熻浣嶇疆/鏍峰紡/鏁伴噺瑙勫緥锛涘畾涔夊垽鏂姄鍏抽敭瑕佷欢锛涚被姣旀帹鐞嗙悊娓呰瘝闂村叧绯伙紱閫昏緫鍒ゆ柇鎺屾彙鍔犲己鍓婂急鍏紡銆傛帹鑽愯姳鐢熷崄涓夌殑鍒ゆ柇浣撶郴銆?/p>
+    <h4>3. 鏁伴噺鍏崇郴锛堢害10-15棰橈級</h4>
+    <p>骞夸笢鏁伴噺鍋忕畝鍗曪紝閲嶇偣绐佺牬宸ョ▼闂銆佽绋嬮棶棰樸€佸埄娑﹂棶棰樸€佹帓鍒楃粍鍚堛€傛帉鎻′唬鍏ユ帓闄ゃ€佹柟绋嬫硶銆佽祴鍊兼硶銆傜洰鏍囷細10棰樺7棰樺嵆鍙紝涓嶆亱鎴樸€?/p>
+    <h4>4. 璧勬枡鍒嗘瀽锛堢害15-20棰橈級</h4>
+    <p>鍔″繀鎷挎弧鍒嗘ā鍧楋紒鐔熻鍩烘湡/鐜版湡/澧為暱鐜?姣旈噸/骞冲潎鏁板叕寮忋€傞€熺畻鎶€宸э細鎴綅鐩撮櫎銆佺壒寰佹暟瀛楁硶銆佸樊鍒嗘硶銆傛瘡澶?濂楄鏃惰缁冿紝鐩爣25鍒嗛挓鍐呭畬鎴愩€?/p>
+    <h4>5. 甯歌瘑鍒ゆ柇锛堢害15棰橈級</h4>
+    <p>鏃舵斂涓轰富+娉曞緥+绉戞妧+鏂囧彶銆傛瘡澶╂櫒璇?0鍒嗛挓鏃舵斂锛堝涔犲己鍥?浜烘皯鏃ユ姤锛夛紝鍗楁矙鍖烘儏蹇呰€冿紙鑷锤鍖烘斂绛栥€佸ぇ婀惧尯瑙勫垝锛夈€?/p>
   </div>
 
   <div class="card guide-section">
-    <h3>éå¶ç¬ é¢å® îæ¾¶åªâ¬å©æå¨?/h3>
-    <p><strong>çå¿î½éå î§é·?éåç½/çµå­ç¥éå¤ç´°</strong>ç»æîéã©å´éã¨åéæ­æ¡éå±½îæµ¼?é¶?éæ­æ¡é¥æºâ¬æå§éæ½æ­çå¶â¬ä¾ç®æ£°æ£çéä½¹â¬è¤ç²¨éã£â¬åî§é·îî½éåæ½¯éæ¥å£éå±¾ç¡é?é¬ç»å«­é?çæç´"é?/p>
-    <p><strong>éîæéæ¬ç¶é?/strong>éºå±¾å½15ç»å¶ç¶çä½¸åéå¨ç¸å¯®å¿¥ç´é«æ°±ç¡éä½¹å§¤éå¨¿â¬ä½¹å°çä½µâ¬ä½¸å±ç»å¤ç´éå²å¸éè§æ§¸éçç´¡çå®å¯éå²î¢ç·â¬å¯°æ¤¾ç¶éåç®æ¶æ»ç¶é°åªçé¶ã£â¬ä½¸ä¼æµ£æ»æå¦å ¢è¢«é?/p>
-    <p><strong>æ¾¶Ñç¶éå·ç´°</strong>æµæîæ¶å¤åå¯®å¿ç²¨éå¶ç´å¯®â¬æ¾¶?æ¶å¤ééåîé?ç¼æ³ç¬éå¤ç´éåîééç² éæ­æ¡æ¶îå½éç¬ºâ¬åç¡éã¨å¦çæå1ç»¡å§ç¬éæãæµ£æ»æéå±¾å£ç»æ¬æ±é¢å® îéµè§æ¼é´æ ¬åçå«î²é©æ¨¸â¬åÐç»±?0æ¶îâ¬æ°±æ¤å¯®â¬æ¾¶å­Äéå®æ°5æ¶îç²¨çç¬Äéè£¤â¬?/p>
-    <p><strong>æ¶ï¹åé?/strong>çæ¥æå®¸ã¦æ£é³è¥å½3-5éåâ¬åç¡æ¾¶âç²ç?5éåæé?/p>
+    <h3>鉁嶏笍 鐢宠澶囪€冩柟娉?/h3>
+    <p><strong>灏忛锛堟鎷?鍒嗘瀽/瀵圭瓥锛夛細</strong>绛旀鍏ㄩ儴鏉ヨ嚜鏉愭枡锛屽浼?鎶?鏉愭枡鈥斺€旀姄鍏抽敭璇嶃€侀珮棰戣瘝銆佹€荤粨鍙ャ€傛鎷鍒嗘潯鍒楃偣锛屾瘡鏉?鎬绘嫭鍙?灞曞紑"銆?/p>
+    <p><strong>鍏枃鍐欎綔锛?/strong>鎺屾彙15绉嶅父瑙佸叕鏂囨牸寮忥紙閫氱煡銆佹姤鍛娿€佹剰瑙併€佸嚱绛夛級锛岄噸鐐规槸鏍煎紡瑙勮寖鍜岃瑷€寰椾綋銆傚箍涓滃父鑰冪畝鎶ャ€佸伐浣滄柟妗堢被銆?/p>
+    <p><strong>澶т綔鏂囷細</strong>浜旀涓夊垎寮忕粨鏋勶紙寮€澶?涓変釜鍒嗚鐐?缁撳熬锛夛紝鍒嗚鐐逛粠鏉愭枡涓彁鐐笺€傛瘡鍛ㄨ嚦灏戝啓1绡囧畬鏁村ぇ浣滄枃锛屾壘绔欓暱鐢宠鎵规敼鎴栬嚜璇勫鐩樸€傜Н绱?0涓€氱敤寮€澶存ā鏉垮拰5涓粨灏炬ā鏉裤€?/p>
+    <p><strong>涔﹀啓锛?/strong>瀛楄抗宸ユ暣鑳芥彁3-5鍒嗐€傛瘡澶╃粌瀛?5鍒嗛挓銆?/p>
   </div>
 
   <div class="card guide-section">
-    <h3>é¦æ· éæ¥çéçåé°åªå£ç»®æî¦</h3>
+    <h3>馃搷 鍗楁矙鍖烘儏鑰冪偣绮捐</h3>
     <div class="highlight-box">
-      <p><strong>ç¹æ°«ç¶é?/strong>éæ¥çéîè å¨îå¢æ¾¶Ñåéååæµ£æèè¹å¿ç´éªå®çªéîç«´é©åº¡ç«¶éîèè¹å¿ç´é¥èîç»¾Ñæé?é·îé¤çæ¢çé?ç»®ãèå©¢å²åéã ææµ£æ»ãé¼å¨å°¯"æ¶å¤å°¯éç²å§"é?/p>
-      <p><strong>éæ¥çéè§îé?022éª?éå æµéï¿ æ«éæ¿å½éå¤ç´°</strong>æ¶å¤ãéå £îéè¡¡â¬æºâ¬æ¿ç°¡é©æ¶çç»¾å§â¬ä½¸å´¡å¨æ¬åéä½¸å´¡å¨æ¬îçï¹çéæ¶ç°²æ¾¶Ñå¸ééæ¢éÂ°â¬åç³è¹å¨å§é¿î¿çéæ°±îé¶â¬éæ¶æéä¾æ½éªæå±æ¶æ°¥â¬ä½½îéæ¬îéºã£â¬ä¾ç®å§æé©å¯®â¬éä¿±â¬?/p>
-      <p><strong>é?5%ç»åº¢æ¹æµ¼æ¨»å¬é?/strong>æ¦§æ³å§³ç»«è®³éªæ¶æ°«ç´æ¶æ°¬åºé¸?5%å¯°ä½¹æ¹æµ¼ä½·ç¬éµâ¬å¯°æ¥â£éæ¶èå©¢å²ç³å§æå¼·æ¾§å¨î»æ¥æ¨¼î¬ç»±Ñå·±æµçå¢ æ¶îâ£ç?5%é®ã¥åéå¶ç·é?/p>
-      <p><strong>æµÑç¬éç°æé?/strong>éé¸¿åç¼æ£ä»æ¶åº¢æé³è¥ç°®å§¹åæºéä½¹ææ¶â¬æµ ï½ä¿é­îå¦§éîâ¬ä½ºæéâå°°é½îç¬éã¥æéä½½åç»é¸¿åæ¾¶â¿â¬ä½¹æ£å¨²å¬¬îé¶â¬é?/p>
-      <p><strong>æµãâ¬æ°­çç»¾æ¤ç´°</strong>å¨£åèé«æ°¶äº¾éæ¥çç»¾è£¤â¬ä½¸å´¡å¨æ¬èé¾ä½½ç¾éä½¸æ¹´é¾?8éé£åéå åé¥è¥æ¸¶è¹î¢æ¹´é¾ä¾ç´160km/héå¤â¬?2éé£åé?/p>
-      <p><strong>å§æ ææ¤¤å­æ´°é?/strong>å¨îæ±çæ¬ç´µçï¸½çéä½·èçåç«´éã å´¡å¨æ¬æ«éæâ¬ä½¸ç®æ¶æ»æ¸·æ¶îå°°éã å´¡å¨æ¬å°°éî¬â¬?/p>
-      <p><strong>é¢ç¸â¬ä¾ç´°</strong>éæ¥çå©å®æ¹´éå â¬æ¬ç¬©æ¾¶âçéå¤â¬ä¾ç²çéç¾å¦«î½çéîæ´¯éä½½æ§éã¦æ¸¤çº°Ñäº¾é?/p>
+      <p><strong>瀹氫綅锛?/strong>鍗楁矙鏄菠娓境澶ф咕鍖哄嚑浣曚腑蹇冿紝骞垮窞鍞竴鍩庡競鍓腑蹇冿紝鍥藉绾ф柊鍖?鑷锤璇曢獙鍖?绮ゆ腐婢冲叏闈㈠悎浣滅ず鑼冨尯"涓夊尯鍙犲姞"銆?/p>
+      <p><strong>鍗楁矙鏂规锛?022骞?鏈堝浗鍔￠櫌鍗板彂锛夛細</strong>涓夊ぇ鍏堣鍖衡€斺€斿簡鐩涙灑绾姐€佸崡娌欐咕銆佸崡娌欑瀛﹀煄锛涗簲澶ч噸鐐逛换鍔°€傛牳蹇冨叧閿瘝锛氱鎶€鍒涙柊銆侀潚骞村垱涓氥€佽鍒欒鎺ャ€侀珮姘村钩寮€鏀俱€?/p>
+      <p><strong>鍙?5%绋庢敹浼樻儬锛?/strong>榧撳姳绫讳骇涓氫紒涓氬噺鎸?5%寰佹敹浼佷笟鎵€寰楃◣锛涙腐婢冲眳姘戝強澧冨楂樼绱х己浜烘墠涓◣瓒?5%閮ㄥ垎鍏嶅緛銆?/p>
+      <p><strong>浜т笟鏂瑰悜锛?/strong>鏅鸿兘缃戣仈涓庢柊鑳芥簮姹借溅銆佹柊涓€浠ｄ俊鎭妧鏈€佺敓鐗╁尰鑽笌鍋ュ悍銆佽埅绌鸿埅澶┿€佹捣娲嬬鎶€銆?/p>
+      <p><strong>浜ら€氭灑绾斤細</strong>娣变腑閫氶亾鍗楁矙绾裤€佸崡娌欐腐閾佽矾銆佸湴閾?8鍙风嚎锛堝叏鍥芥渶蹇湴閾侊紝160km/h锛夈€?2鍙风嚎銆?/p>
+      <p><strong>姘戠敓椤圭洰锛?/strong>娓汉瀛愬紵瀛︽牎銆佷腑灞变竴闄㈠崡娌欓櫌鍖恒€佸箍涓滅渷涓尰闄㈠崡娌欏尰闄€?/p>
+      <p><strong>鐢熸€侊細</strong>鍗楁矙婀垮湴锛堝€欓笩澶╁爞锛夈€侀粍灞遍瞾妫灄鍏洯銆佽晧闂ㄦ渤纰ч亾銆?/p>
     </div>
   </div>
 
   <div class="card guide-section">
-    <h3>é¦å¹ Bç»æ¬î¬é°å­î³ç»å¬«å¸¹é½?/h3>
-    <div class="course-card"><div class="up">ç»®å¤çªéîâ¬?/div><div class="desc">éîå§éæ¨¿â¬å­ç¯ç»î¿ç«´éä½ºå¢éå²îå¨´å¬¬é´ç¼ç»î³+é¢å® îç»®æîéå²æª®ç¯ï¸½æ«¤é³è¥å£éå¹¿â¬åâ¬åæéè·ºççº­â¬éã©æ£¬éå²î³ç»å¬©ç¶ç»¯ç»æ¸¶ç¹å±¾æ£é?/div><div class="tags"><span class="tag">ç»¯è¤ç²ºç?/span><span class="tag">éè·ºççº­â¬</span><span class="tag">éã§î</span></div></div>
-    <div class="course-card"><div class="up">éæ¨»æçå³in</div><div class="desc">ç§å¬æ¡éåç½+éä¼´åºéå´é´æ¾¶âå§³éè·¨éªçæç¬éå²â¬çºç»é¶â¬å®¸Ñå«­å§ã¥ãæ¶å¬¨â¬åâ¬åæéå¤ççº­â¬éåº¢å½é«ç¸å½éå­ç´çè¶Ðæ¤åº¢ç¸æ¤åº¤å®éªä»ç²¯é?/div><div class="tags"><span class="tag">ç§å¬æ¡éåç½</span><span class="tag">éä¼´åºéå´é´</span><span class="tag">é«çºç»</span></div></div>
-    <div class="course-card"><div class="up">éºè¾©æéä½·ç¬</div><div class="desc">éãæéºã§æ+ç§å¬æ¡éåç½éå¬¬å¢çæç¬éåå«­éæ¶å½éîå¸¹éåç¶ç»¯ä¼ç´é«æç·«å¨å®æ«éåç¥«éæ¬åéæ®æ®"415æµ è¥æå¨?é?é©æ­æé¬æ¿å"éªå¤¸è´å¨´ä½·ç´¶é?/div><div class="tags"><span class="tag">éãæéºã§æ</span><span class="tag">ç§å¬æ¡éåç½</span><span class="tag">æ©æ¶¢æ¨</span></div></div>
-    <div class="course-card"><div class="up">ç»æ¬æ±é¢å® î</div><div class="desc">é¢å® îæ£°åçéâ¬éå³°å¥éå¶å§UPæ¶è®³ç®£æ¶â¬éå±½ãæµ£æ»æå¦åç¦éè§ç¡¶ççç¬å¯®ç´ç´é»æªç·µéµè§æ¼éå¶å§éåâ¬åæé¢å® îé¯å²å¿75+é¨å®â¬åªæé?/div><div class="tags"><span class="tag">é¢å® î</span><span class="tag">æ¾¶Ñç¶é?/span><span class="tag">éµè§æ¼</span></div></div>
-    <div class="course-card"><div class="up">éåº¢âµæ¿å·ç´éåº¡æµéæ¬åé?/div><div class="desc">ç¯æ­çéãææ¶æ»ãéå±½å½çâ¬çæ¿ç¹å¨æ¢æ½ªç¯æç®éå â¬åæ¤éè·¨å¹éè§æ´¿éæ¿å¼·éè®¹ç´é«åæç¯æ­çéå«æ¥é¨å«æçï¹æ©é«ç¸å½éåâ¬?/div><div class="tags"><span class="tag">ç¯æ­ç</span><span class="tag">éèµæ</span><span class="tag">éï½ç</span></div></div>
-    <div class="course-card"><div class="up">é½âç¬æµåç</div><div class="desc">çå±¾ç¥´éã§îçè¶Ðéå²â¬æç·«æ¶ã¥çéå²â¬åæéå¤ççº­â¬é¨å®â¬åªæç»¯è¤ç²ºå§å´æéåæé²å¿å§ç»¯è¯²æ°é«æç·«éãæçãå¾éååµé?/div><div class="tags"><span class="tag">çå±¾ç¥´éã§î</span><span class="tag">æ©æ¶¢æ¨</span></div></div>
-    <div class="course-card"><div class="up">çå¿âéã¥åé°?/div><div class="desc">é¢å® î+éã£ç¯éå±¾æ¡çæç¬éå²îçï½å¸´é¦ççµéä½¸çé¿å¶â¬Ñå·±éåãæµ£æ»æç»±ç³æ½ç»îç®éç²ç¶æ¶æ¿çéå²â¬åæé¦ã¨äº´é°åªæçº°åº£å¢éæ §îæ¶ç®â¬?/div><div class="tags"><span class="tag">é¢å® î</span><span class="tag">éã£ç¯</span><span class="tag">ç»±ç³æ½</span></div></div>
-    <div class="course-card"><div class="up">éîâ¬å§ç«·æ¶?/div><div class="desc">æµ ã§ç­çåî¶è¤°ã ç´¡é·åÐéªç¼î½éå±¾ç¡æ¶îîæ£°?-8éåæéå²â¬åæé«æ°¬å«éå æ£¿çï¸¿ç¯éåâçîæ°éãææ¶æ»ãéâ¬æ¶åå­è¤°â¿â¬?/div><div class="tags"><span class="tag">çº°åº£å¢é?/span><span class="tag">ç·â¬ç?/span><span class="tag">éãæ</span></div></div>
-    <div class="course-card"><div class="up">éã£ç¯çï¹æ±</div><div class="desc">ç¼æ´ç¯éæ ­æ½°çæç¬æ¤¤ç¸ç´å¦¯âå«ç»æî½+é«æ°î½éç¡çéå²ç¹éçºæ¹¡ç¹ç¶â¬å¨æºå§æ¶æ´¿éåâ¬åæç»æç¯é«æ°³ç¹éåº£çéå©æ½°çæâ¬?/div><div class="tags"><span class="tag">éã£ç¯</span><span class="tag">ç¼æ´ç¯é?/span></div></div>
-    <div class="course-card"><div class="up">éîâ¬å®ç¶æ¥¹?/div><div class="desc">éä¼´åºéå´é´+ç§å¬æ¡éåç½éå±¼ç¬æ¤¤ç¸ç´çè¶Ðç¼åå§éå²â¬åæé©è¹îæå¨æ¥é¨å«æçï¸ºâ¬åæ¹æ¾¶Ñåºéå¶åéç½î½çåî¶é?/div><div class="tags"><span class="tag">éä¼´åº</span><span class="tag">ç§å¬æ¡</span><span class="tag">éç½î½</span></div></div>
-    <div class="course-card"><div class="up">é¬æ¿ç¾é?/div><div class="desc">éãæéºã§ææ¶æ»ãéå±½æµè¤°ã¡å¸¹éåîçï½å«­éå¸®ç´ç»æ´ªæ£¿é²å¶ç¯é¶â¬å®¸Ñçéæã½é¢ã£â¬åâ¬åæé¥ç¬å¸¹éå«æ¥é¨å®â¬åªæé?/div><div class="tags"><span class="tag">éãæéºã§æ</span><span class="tag">é¥ç¬å¸¹</span></div></div>
-    <div class="course-card"><div class="up">æ¾¶Ñçéîâ¬?/div><div class="desc">é¢å® îç»±ç³æ½ç»îç®é¨å©¾Pæ¶ä¼ç´å§£å¿æ£©éå­æéèµæéî å£+é¢å® îçå®å¯çã¨æªéå²â¬åæéã¨î°éå²ç¤éæ¬åæ¾¶å¥â¬?/div><div class="tags"><span class="tag">é¢å® îç»±ç³æ½</span><span class="tag">éèµæ</span></div></div>
-    <div class="course-card"><div class="up">éîâ¬å­â¬ä½½æ·³</div><div class="desc">çå±¾ç¥´éªç¼î½ç»®æîéå±¼äºéåå¾é¥åâ¬å¨æ°éªä½½â¬åªæ¹¡æ£°æ¨¹è´éæ¿æ¹°é«æ°î½é·åÐéåâ¬åæéç½î½éèµîæµ£è·¨æ¤é?/div><div class="tags"><span class="tag">éªç¼î½</span><span class="tag">çå±¾ç¥´</span></div></div>
-    <div class="course-card"><div class="up">å§ï¹âé°ä½¸ç¬éå ç¶çåç¬æ¤¤ç¸ç´</div><div class="desc">ç¯æ­çéï½çé«ç»îç»¯è¯²åªéå±¾å¦¸éîåé¨å«ç¶çåç´ªé´æ°ãéï½ç°»éå²îè¹åæ¥éå¨ç¬æ¥æ¨¸â¬åç¡¶å¯°å¬ªç¶çåç¬æ£°æ¨ºæ¨æ¶çå¸¹é½æ©â¬?/div><div class="tags"><span class="tag">ç¯æ­ç</span><span class="tag">å¨æç·¥</span><span class="tag">é«ç»î</span></div></div>
+    <h3>馃幀 B绔欏鑰冭绋嬫帹鑽?/h3>
+    <div class="course-card"><div class="up">绮夌瑪鍏€?/div><div class="desc">鍏姟鍛樿€冭瘯绗竴鍝佺墝锛岃娴嬬郴缁熻+鐢宠绮捐锛岄檮甯︽櫤鑳芥壒鏀广€傞€傚悎闆跺熀纭€鍏ラ棬锛岃绋嬩綋绯绘渶瀹屾暣銆?/div><div class="tags"><span class="tag">绯荤粺璇?/span><span class="tag">闆跺熀纭€</span><span class="tag">鍏ㄧ</span></div></div>
+    <div class="course-card"><div class="up">鍒樻枃瓒匳in</div><div class="desc">璧勬枡鍒嗘瀽+鏁伴噺鍏崇郴澶╄姳鏉跨骇璁插笀锛岄€熺畻鎶€宸х嫭姝ュぉ涓嬨€傞€傚悎鏈夊熀纭€鍚庢彁閫熸彁鍒嗭紝璁茶В椋庢牸椋庤叮骞介粯銆?/div><div class="tags"><span class="tag">璧勬枡鍒嗘瀽</span><span class="tag">鏁伴噺鍏崇郴</span><span class="tag">閫熺畻</span></div></div>
+    <div class="course-card"><div class="up">鑺辩敓鍗佷笁</div><div class="desc">鍒ゆ柇鎺ㄧ悊+璧勬枡鍒嗘瀽鐜嬬墝璁插笀銆傜嫭鍒涘垽鏂帹鐞嗕綋绯伙紝閫昏緫娓呮櫚銆傝祫鏂欏垎鏋愮殑"415浠芥暟娉?鍜?鐩愭按鎬濇兂"骞夸负娴佷紶銆?/div><div class="tags"><span class="tag">鍒ゆ柇鎺ㄧ悊</span><span class="tag">璧勬枡鍒嗘瀽</span><span class="tag">杩涢樁</span></div></div>
+    <div class="course-card"><div class="up">绔欓暱鐢宠</div><div class="desc">鐢宠棰嗗煙鏈€鍏峰奖鍝嶅姏UP涓讳箣涓€锛屽ぇ浣滄枃妗嗘灦鏂规硶璁烘瀬寮猴紝鎻愪緵鎵规敼鏈嶅姟銆傞€傚悎鐢宠鎯冲啿75+鐨勮€冪敓銆?/div><div class="tags"><span class="tag">鐢宠</span><span class="tag">澶т綔鏂?/span><span class="tag">鎵规敼</span></div></div>
+    <div class="course-card"><div class="up">鏉庢ⅵ濞囷紙鍗庡浘鏁欒偛锛?/div><div class="desc">甯歌瘑鍒ゆ柇涓撻」锛屽彛璇€璁板繂娉曢潪甯搁珮鏁堛€傛椂鏀跨儹鐐规洿鏂板強鏃讹紝閫傚悎甯歌瘑钖勫急鐨勫悓瀛﹀揩閫熸彁鍒嗐€?/div><div class="tags"><span class="tag">甯歌瘑</span><span class="tag">鏃舵斂</span><span class="tag">鍙ｈ瘈</span></div></div>
+    <div class="course-card"><div class="up">閽╀笉浜嗘矇</div><div class="desc">琛屾祴鍏ㄧ璁茶В锛岄€昏緫涓ュ瘑锛岄€傚悎鏈夊熀纭€鐨勮€冪敓绯荤粺姊崇悊銆傛暟閲忓叧绯诲拰閫昏緫鍒ゆ柇灏ゅ叾鍑哄僵銆?/div><div class="tags"><span class="tag">琛屾祴鍏ㄧ</span><span class="tag">杩涢樁</span></div></div>
+    <div class="course-card"><div class="up">灏忛┈鍝ュ叕鑰?/div><div class="desc">鐢宠+闈㈣瘯鍙屾枡璁插笀锛岃瑙ｆ帴鍦版皵銆佸疄鎿嶆€у己銆傚ぇ浣滄枃绱犳潗绉疮闈炲父涓板瘜锛岄€傚悎鍦ㄨ亴鑰冪敓纰庣墖鍖栧涔犮€?/div><div class="tags"><span class="tag">鐢宠</span><span class="tag">闈㈣瘯</span><span class="tag">绱犳潗</span></div></div>
+    <div class="course-card"><div class="up">鍏€冧竷涓?/div><div class="desc">浠ョ煭瑙嗛褰㈠紡鎷嗚В鐪熼锛屾瘡涓棰?-8鍒嗛挓锛岄€傚悎閫氬嫟鏃堕棿瀛︿範銆傝█璇拰鍒ゆ柇涓撻」鏈€涓哄嚭褰┿€?/div><div class="tags"><span class="tag">纰庣墖鍖?/span><span class="tag">瑷€璇?/span><span class="tag">鍒ゆ柇</span></div></div>
+    <div class="course-card"><div class="up">闈㈣瘯瀛﹂暱</div><div class="desc">缁撴瀯鍖栭潰璇曚笓椤癸紝妯℃嫙绛旈+閫愰鐐硅瘎锛岃繕鍘熺湡瀹炶€冨満姘涘洿銆傞€傚悎绗旇瘯閫氳繃鍚庣獊鍑婚潰璇曘€?/div><div class="tags"><span class="tag">闈㈣瘯</span><span class="tag">缁撴瀯鍖?/span></div></div>
+    <div class="course-card"><div class="up">鍏€冮綈楹?/div><div class="desc">鏁伴噺鍏崇郴+璧勬枡鍒嗘瀽鍙屼笓椤癸紝璁茶В缁嗚嚧锛岄€傚悎鍩虹杈冨急鐨勫悓瀛︺€傛湁澶ч噺鍏嶈垂鍒烽瑙嗛銆?/div><div class="tags"><span class="tag">鏁伴噺</span><span class="tag">璧勬枡</span><span class="tag">鍒烽</span></div></div>
+    <div class="course-card"><div class="up">鎬濊矾钖?/div><div class="desc">鍒ゆ柇鎺ㄧ悊涓撻」锛屽浘褰㈡帹鐞嗚瑙ｇ嫭鍒帮紝绌洪棿閲嶆瀯鎶€宸х畝鍗曞ソ鐢ㄣ€傞€傚悎鍥炬帹钖勫急鐨勮€冪敓銆?/div><div class="tags"><span class="tag">鍒ゆ柇鎺ㄧ悊</span><span class="tag">鍥炬帹</span></div></div>
+    <div class="course-card"><div class="up">澶у疂鍏€?/div><div class="desc">鐢宠绱犳潗绉疮鍨婾P涓伙紝姣忔棩鏇存柊鏃舵斂鐑偣+鐢宠瑙勮寖琛ㄨ揪锛岄€傚悎鏅ㄨ鍜岀礌鏉愬偍澶囥€?/div><div class="tags"><span class="tag">鐢宠绱犳潗</span><span class="tag">鏃舵斂</span></div></div>
+    <div class="course-card"><div class="up">鍏€冭€佽淳</div><div class="desc">琛屾祴鐪熼绮捐锛屼互鍘嗗勾鍥借€冨拰鐪佽€冪湡棰樹负钃濇湰閫愰鎷嗚В銆傞€傚悎鍒烽闃舵浣跨敤銆?/div><div class="tags"><span class="tag">鐪熼</span><span class="tag">琛屾祴</span></div></div>
+    <div class="course-card"><div class="up">姊﹀▏鑰佸笀锛堝父璇嗕笓椤癸級</div><div class="desc">甯歌瘑鍙ｈ瘈閫熻绯诲垪锛屾妸鏋嚗鐨勫父璇嗙紪鎴愰『鍙ｆ簻锛岃蹇嗘晥鐜囨瀬楂樸€傛硶寰嬪父璇嗕笓棰樺挨涓烘帹鑽愩€?/div><div class="tags"><span class="tag">甯歌瘑</span><span class="tag">娉曞緥</span><span class="tag">閫熻</span></div></div>
   </div>
 
   <div class="card guide-section">
-    <h3>é¦å¸³ éã£ç¯éåî¬å¯¤é¸¿î</h3>
-    <p><strong>éªå¤¸ç¬¢éã£ç¯è¤°ã ç´¡é?/strong>ç¼æ´ç¯éæ ­æ½°çæè´æ¶ä¼ç´4æ£°?0éåæéå æé¬æ¿â¬å©æ¤éè¾¾ç´éå±¼æ¶é²å¶æ£éå åéæ©â¬ä½ºç²ç¼å©î¸éåâ¬ä½¸ç°²é¬ã¥ç°²éæ¨¸â¬ä½·æ±éå®ç¡é«æ°¬æ´æ¾¶Ñî½é¨å¬¨â¬?/p>
-    <p><strong>éæ¥çéç¡å£é°å®î½é?/strong>ç¯å¥ç²¨éå £åçç¨¿å°¯å¯¤é¸¿îéä½ºè å¨îå¢éå ç¶éä½½æéåå¹æ¾§å§ç´­éæ «çéçåéî å£éä»î½é?/p>
-    <p><strong>æ¾¶åªâ¬å©æå¨æªç´°</strong>é¶ç³ç¡æ¾¶âç´éï½ç²æ¶?-3æ£°æ¨ºèè¤°æ¢ç¶æ¾¶å¶æ´éæ¶æ½ç»îç®20æ¶îå´¡å¨æ¬å½çæ ãæ¸å¬ªæ°10æ¶îç®æ¶æ»æç»æ «ç¤éæ¶ç´±é¶ã¡å£é°å¨å¼¸ç¼å¯æ§¦çµå­ç²é´æ ¨å§¤ç»¾å¤¸ç¬å¦¯âå«éî¨ç´±é¶ï½æé°å¿åçã¤åé¬ä½µâ¬ä½¸ï¼éè«æ¤½æµîºâ¬ä½¹æ½¯éåç«»éå¸®ç´ç»î¿ç«´/ç»î¿ç°©/ç»î¿ç¬éå¤â¬?/p>
-    <p><strong>éºã¨å´ç§å¬ç°®é?/strong>Bç»æ¬â¬å²æ½°çæîéè£¤â¬å¶â¬å±½ç¬æ¤¹îæéîâ¬å¦â¬å¶ç´é æ»âé·å¤æ³¤éå±½åéâ³æ³éã£ç¯100æ£°æ¨¸â¬å¶â¬?/p>
-    <p><strong>ç»ææ½°çæå¸´é?/strong>ç»æç¯æ¾¶åªâ¬å®æ¨å¨éåµéîç¡æ¾¶âæ¹ç?5éåæéå æ±å§ææ£©é¶ã¨çç?éæ¥çéææ¼æ¿®æ¿åæµ¼æ¥å½¿éå©ç·éå¤ç´é©ç°åçîåéå±¾æç»æ §åæ¾¶å¥â¬?/p>
+    <h3>馃帳 闈㈣瘯鍑嗗寤鸿</h3>
+    <p><strong>骞夸笢闈㈣瘯褰㈠紡锛?/strong>缁撴瀯鍖栭潰璇曚负涓伙紝4棰?0鍒嗛挓锛堝惈鎬濊€冩椂闂达級锛屼晶閲嶇患鍚堝垎鏋愩€佺粍缁囩鐞嗐€佸簲鎬ュ簲鍙樸€佷汉闄呮矡閫氬洓澶ч鍨嬨€?/p>
+    <p><strong>鍗楁矙鐗硅壊鑰冮锛?/strong>甯哥粨鍚堣嚜璐稿尯寤鸿銆佺菠娓境鍚堜綔銆佽惀鍟嗙幆澧冧紭鍖栫瓑鍖烘儏鐑偣鍛介銆?/p>
+    <p><strong>澶囪€冩柟娉曪細</strong>鈶犳瘡澶╁紑鍙ｇ粌涔?-3棰樺苟褰曢煶澶嶇洏锛涒憽绉疮20涓崡娌欏彂灞曠ず渚嬪拰10涓箍涓滄斂绛栫礌鏉愶紱鈶㈡壘鑰冨弸缁勯槦瀵圭粌鎴栨姤绾夸笅妯℃嫙鐝紱鈶ｆ敞鎰忎华琛ㄤ华鎬併€佸０闊虫椽浜€佹潯鐞嗘竻鏅帮紙绗竴/绗簩/绗笁锛夈€?/p>
+    <p><strong>鎺ㄨ崘璧勬簮锛?/strong>B绔欍€岄潰璇曞闀裤€嶃€屽皬椹摜鍏€冦€嶏紝鍠滈┈鎷夐泤銆屽叕鍔″憳闈㈣瘯100棰樸€嶃€?/p>
+    <p><strong>绗旈潰琛旀帴锛?/strong>绗旇瘯澶囪€冮樁娈靛嵆鍙瘡澶╂湕璇?5鍒嗛挓锛堜汉姘戞棩鎶ヨ瘎璁?鍗楁矙鍙戞敼濮斿叕浼楀彿鏂囩珷锛夛紝鍩瑰吇璇劅鍜屾斂绛栧偍澶囥€?/p>
   </div>
 </div>
 
-<!-- Tab 3: çè®³åçâ³å -->
+<!-- Tab 3: 璇讳功璁″垝 -->
 <div class="tab-content" id="tab-reading">
   <div class="card">
-    <div class="card-title"><span class="icon">é¦æ</span> éå°î°æ©æ¶å®³å§åî</div>
+    <div class="card-title"><span class="icon">馃摎</span> 闃呰杩涘害姒傝</div>
     <div class="reading-stats-row">
       <div class="reading-stat-card">
         <div class="reading-stat-value" id="booksRead">0</div>
-        <div class="reading-stat-label">å®¸è¶î°ç¹?/ 15é?/div>
+        <div class="reading-stat-label">宸茶瀹?/ 15鏈?/div>
       </div>
       <div class="reading-stat-card">
         <div class="reading-stat-value" id="booksProgress">0%</div>
-        <div class="reading-stat-label">ç¹å±¾åæ©æ¶å®³</div>
+        <div class="reading-stat-label">瀹屾垚杩涘害</div>
       </div>
       <div class="reading-stat-card">
-        <div class="reading-stat-value" id="readingTotalTime">0éåæ</div>
-        <div class="reading-stat-label">ç»±îî¸éå°î°</div>
+        <div class="reading-stat-value" id="readingTotalTime">0鍒嗛挓</div>
+        <div class="reading-stat-label">绱闃呰</div>
       </div>
       <div class="reading-stat-card">
         <div class="reading-stat-value" id="booksReading">0</div>
-        <div class="reading-stat-label">å§ï½æ¹ªéå°î°</div>
+        <div class="reading-stat-label">姝ｅ湪闃呰</div>
       </div>
     </div>
     <div class="week-progress-bar"><div class="week-progress-fill" id="readingBar" style="width:0%;background:linear-gradient(90deg,#8e44ad,#ab47bc);"></div></div>
@@ -421,48 +421,48 @@ body {
   <div id="bookListContainer"></div>
 </div>
 
-<!-- Tab 4: é´æ æ®ç¼ç»î¸ -->
+<!-- Tab 4: 鎴戠殑缁熻 -->
 <div class="tab-content" id="tab-stats">
   <div class="stat-grid">
-    <div class="stat-card"><div class="stat-value" id="weekRate">0%</div><div class="stat-label">éîæç¹å±¾åé?/div></div>
-    <div class="stat-card"><div class="stat-value" id="totalDays">0</div><div class="stat-label">é¬ç»å¢¦éâ³ãé?/div></div>
-    <div class="stat-card"><div class="stat-value" id="streakDays">0</div><div class="stat-label">æ©çµç»éµæ³å´±</div></div>
+    <div class="stat-card"><div class="stat-value" id="weekRate">0%</div><div class="stat-label">鏈懆瀹屾垚鐜?/div></div>
+    <div class="stat-card"><div class="stat-value" id="totalDays">0</div><div class="stat-label">鎬绘墦鍗″ぉ鏁?/div></div>
+    <div class="stat-card"><div class="stat-value" id="streakDays">0</div><div class="stat-label">杩炵画鎵撳崱</div></div>
   </div>
 
   <div class="card">
-    <div class="card-title"><span class="icon">é¦æ³</span> éîææ©æ¶å®³</div>
+    <div class="card-title"><span class="icon">馃搳</span> 鏈懆杩涘害</div>
     <div class="week-progress-bar"><div class="week-progress-fill" id="weekBar" style="width:0%"></div></div>
-    <div style="text-align:center;font-size:12px;color:var(--text-secondary);margin-top:3px;" id="weekText">0 / 0 æµ è¯²å§ç¹å±¾å</div>
+    <div style="text-align:center;font-size:12px;color:var(--text-secondary);margin-top:3px;" id="weekText">0 / 0 浠诲姟瀹屾垚</div>
   </div>
 
   <div class="card">
-    <div class="card-title"><span class="icon">é´æç¬</span> éå¬Äé§æ¥îæ¶ç³æ¤éå¡ç´ç¹çºæª¯çâæ¤é?/div>
+    <div class="card-title"><span class="icon">鈴憋笍</span> 鍚勬ā鍧楀涔犳椂闀匡紙瀹為檯璁℃椂锛?/div>
     <div id="moduleBars"></div>
   </div>
 
   <div class="card">
-    <div class="card-title"><span class="icon">é¦æ®</span> æ©?æ¾¶âå¢¦éâæ£©é?/div>
+    <div class="card-title"><span class="icon">馃搮</span> 杩?澶╂墦鍗℃棩鍘?/div>
     <div id="calendarGrid" style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:6px;"></div>
   </div>
 </div>
 
-<!-- æ´æ¢å´çµè°å -->
+<!-- 搴曢儴瀵艰埅 -->
 <div class="bottom-nav">
   <div class="nav-item active" data-tab="tab-checkin" onclick="switchTab('tab-checkin')">
-    <span class="nav-icon">é¦æµ</span> æµ å©æ£©éµæ³å´±
+    <span class="nav-icon">馃搵</span> 浠婃棩鎵撳崱
   </div>
   <div class="nav-item" data-tab="tab-guide" onclick="switchTab('tab-guide')">
-    <span class="nav-icon">é¦æ</span> æ¾¶åªâ¬å©æ¾é£?  </div>
+    <span class="nav-icon">馃摉</span> 澶囪€冩敾鐣?  </div>
   <div class="nav-item" data-tab="tab-reading" onclick="switchTab('tab-reading')">
-    <span class="nav-icon">é¦æ</span> çè®³åçâ³å
+    <span class="nav-icon">馃摎</span> 璇讳功璁″垝
   </div>
   <div class="nav-item" data-tab="tab-stats" onclick="switchTab('tab-stats')">
-    <span class="nav-icon">é¦æ³</span> é´æ æ®ç¼ç»î¸
+    <span class="nav-icon">馃搳</span> 鎴戠殑缁熻
   </div>
 </div>
 
 <script>
-// ============ å®¸ã¥å¿éè¥æ ============
+// ============ 宸ュ叿鍑芥暟 ============
 function todayKey() {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
@@ -470,7 +470,7 @@ function todayKey() {
 function getDayOfWeek(d) { const day = d.getDay(); return day === 0 ? 7 : day; }
 function isWeekend(d) { const dw = getDayOfWeek(d); return dw === 6 || dw === 7; }
 
-const weekdayModules = ['ç·â¬çî æç?,'éãæéºã§æ','éä¼´åºéå´é´','ç§å¬æ¡éåç½','é¢å® îçå¿î½'];
+const weekdayModules = ['瑷€璇悊瑙?,'鍒ゆ柇鎺ㄧ悊','鏁伴噺鍏崇郴','璧勬枡鍒嗘瀽','鐢宠灏忛'];
 function getModuleForDate(d) {
   const dw = getDayOfWeek(d);
   if (dw >= 6) return null;
@@ -483,25 +483,25 @@ function buildTasks(dateObj) {
   const tasks = [];
   if (weekend) {
     tasks.push(
-      { id:'morning_read', section:'éã©æ£¿', name:'éã¨î°éèµæ30éåæ', desc:'çï¸¿ç¯å¯®åæµ+æµçç¯éã¦å§¤+éæ¥çéææ¼æ¿®æ¿åæµ¼æ¥å½¿', time:'30min', icon:'é¦å¯' },
-      { id:'am_practice', section:'æ¶å©å´', name:'çå±¾ç¥´æ¶æ»ãç¼å§ç¯', desc:'çâæ¤éç½î½1æ¿æ¥ç´110æ£°?100éåæé? é«æ°î½æ¾¶å¶æ´', time:'180min', icon:'é¦æ' },
-      { id:'pm_shenlun', section:'æ¶å¬ªå´', name:'é¢å® îçî ç²', desc:'1é¬æ³ç¬æ£°?æ¾¶Ñç¶éå¨îéåç²æ¶ç³å¨1ç»¡å§ç¬éç¿ ç¶é?, time:'120min', icon:'éå¶ç¬' },
-      { id:'night_review', section:'éæ°¶æ£¿', name:'éîæé¿æ¬î½é¥çºã+éå«æ¥å¦¯â³æ½¡çã¥å·±', desc:'éå¯¸æéîæé¿æ¬î½éîç´é½å î®é¬Ñæ´éªå©¤ç»æ¬î³ç»?, time:'60min', icon:'é¦æ³' },
-      { id:'mock_exam', section:'éæ°¶æ£¿', name:'å¦¯Â¤â¬å¿ç´å§£å¿è¢±éã¤ç«´å¨âç´', desc:'ç¹å±¾æ£çå±¾ç¥´+é¢å® îå¦¯Â¤â¬å¿ç´æ¶ã¦ç¸çâæ¤éå±¾Äé·çºæ¹¡ç¹ç¶â¬å¨æº', time:'240min', icon:'é¦æ«', optional:true }
+      { id:'morning_read', section:'鏅ㄩ棿', name:'鏅ㄨ鏃舵斂30鍒嗛挓', desc:'瀛︿範寮哄浗+浜烘皯鏃ユ姤+鍗楁矙鍙戞敼濮斿叕浼楀彿', time:'30min', icon:'馃寘' },
+      { id:'am_practice', section:'涓婂崍', name:'琛屾祴涓撻」缁冧範', desc:'璁℃椂鍒烽1濂楋紙110棰?100鍒嗛挓锛? 閫愰澶嶇洏', time:'180min', icon:'馃摑' },
+      { id:'pm_shenlun', section:'涓嬪崍', name:'鐢宠璁粌', desc:'1閬撳皬棰?澶т綔鏂囨鏋剁粌涔犳垨1绡囧畬鏁翠綔鏂?, time:'120min', icon:'鉁嶏笍' },
+      { id:'night_review', section:'鏅氶棿', name:'鏈懆閿欓鍥為【+钖勫急妯″潡琛ュ己', desc:'鏁寸悊鏈懆閿欓鏈紝閽堝鎬у洖鐪婤绔欒绋?, time:'60min', icon:'馃攳' },
+      { id:'mock_exam', section:'鏅氶棿', name:'妯¤€冿紙姣忎袱鍛ㄤ竴娆★級', desc:'瀹屾暣琛屾祴+鐢宠妯¤€冿紝涓ユ牸璁℃椂锛屾ā鎷熺湡瀹炶€冨満', time:'240min', icon:'馃搫', optional:true }
     );
   } else {
-    const mod = module || 'ç¼çæ';
+    const mod = module || '缁煎悎';
     tasks.push(
-      { id:'morning_read', section:'éã©æ£¿', name:'éã¨î°éèµæ20éåæ', desc:'çï¸¿ç¯å¯®åæµé?0æ£°?éå°î°1ç»¡å¨æ¤çå¬æç»?, time:'20min', icon:'é¦å¯' },
-      { id:'commute_quiz', section:'é«æ°¬å«', name:'é«æ°¬å«éç½î½', desc:'ç»®å¤çªAPPé?5-20æ£°æ©ç´ç·â¬ç?éãæ/ç¯æ­çé?, time:'25min', icon:'é¦æ®' },
-      { id:'night_deep', section:'éæ°¶æ£¿', name:'å¨£åå®³æ¾¶å¶ç¯é?+mod, desc:'Bç»æ¬î³ç»å¬ªîæ¶?æ¶æ»ãç¼å§ç¯20æ£°?é«æ°î½æ¾¶å¶æ´', time:'90min', icon:'é¦æ' },
-      { id:'error_review', section:'éæ°¶æ£¿', name:'é¿æ¬î½é¬è¤ç²¨15éåæ', desc:'è¤°æ´æ£©é¿æ¬î½è¤°æåé¿æ¬î½éîç´éå¨æé¿æ¬æ´éå²ç¡çåå£', time:'15min', icon:'é¦æµ' }
+      { id:'morning_read', section:'鏅ㄩ棿', name:'鏅ㄨ鏃舵斂20鍒嗛挓', desc:'瀛︿範寮哄浗鍒?0棰?闃呰1绡囨椂璇勬枃绔?, time:'20min', icon:'馃寘' },
+      { id:'commute_quiz', section:'閫氬嫟', name:'閫氬嫟鍒烽', desc:'绮夌瑪APP鍒?5-20棰橈紙瑷€璇?鍒ゆ柇/甯歌瘑锛?, time:'25min', icon:'馃殗' },
+      { id:'night_deep', section:'鏅氶棿', name:'娣卞害澶嶄範锛?+mod, desc:'B绔欒绋嬪涔?涓撻」缁冧範20棰?閫愰澶嶇洏', time:'90min', icon:'馃摉' },
+      { id:'error_review', section:'鏅氶棿', name:'閿欓鎬荤粨15鍒嗛挓', desc:'褰撴棩閿欓褰曞叆閿欓鏈紝鏍囨敞閿欏洜鍜岀煡璇嗙偣', time:'15min', icon:'馃搵' }
     );
   }
   return tasks;
 }
 
-// ============ éçåµé¸ä½·ç®é?============
+// ============ 鏁版嵁鎸佷箙鍖?============
 const STORAGE_KEY = 'nansha_gwy_checkin_v2';
 const READING_KEY = 'nansha_gwy_reading';
 
@@ -538,7 +538,7 @@ function getDuration(dateKey, taskId) {
   return r ? r.dur : 0;
 }
 
-// ============ çè®³åéçåµ ============
+// ============ 璇讳功鏁版嵁 ============
 function loadReadingData() {
   try { const raw = localStorage.getItem(READING_KEY); return raw ? JSON.parse(raw) : {}; }
   catch(e) { return {}; }
@@ -555,31 +555,31 @@ function setBookRecord(bookId, rec) {
   saveReadingData(data);
 }
 
-// æ¶ï¹å´éçåµ
+// 涔﹀崟鏁版嵁
 const BOOK_LIST = [
-  // ç»î¿ç«´çå¦ç´°çã æ¢éîæ
-  { id:'b1', title:'çµå²åéå¥âéå¥å', author:'ç¼æ¤¾ééå­¤éç«»å®?, desc:'æ£°çºî«"éµæ³ä¼ç§æ°¶æ¶"çååº·éå±½ç¼ç»å¬­ç¥«æµÑç¬çç·â¬è¹æ®çãç¡å¦åç¦', layer:'ç»î¿ç«´çå¦ç´°çã æ¢éîæ', layerClass:'l1' },
-  { id:'b2', title:'çå¿å«é½éæ¶', author:'éæ°¬î¿è·¯é¸å¶åç?, desc:'é¢ã§î¢çæ¿îé«å¿åéå©â¬ä½¸î²éâæ°çî¢å§©éè·ºåéç¨¿ç¸¾é«æç·«', layer:'ç»î¿ç«´çå¦ç´°çã æ¢éîæ', layerClass:'l1' },
-  { id:'b3', title:'çã å§é·îæ±æ¶å¬­ç¾', author:'éæ°¬î¿è·¯é¸å¶åç?, desc:'7éªæå´ç¹çµå¹çã å§é·îæ±é¨å«çé¿å¶îæ¥ ãç´"æ·æ¿æ®°é«æç¨éã¢åé·îæ±"æ¶å¤æ¨å¨å«Äé¨?, layer:'ç»î¿ç«´çå¦ç´°çã æ¢éîæ', layerClass:'l1' },
-  // ç»î¿ç°©çå¦ç´°é¶æ¡ç¥«é©è¹îéåî
-  { id:'b4', title:'é±îæ§é¨å¬å§ç§å®â¬?, author:'éîæ¾éå¹éç¸éå³°å·¹æ¿®?, desc:'æµ å³°â¬å¼å§ç§?é¦ï½ç²¡"éå±½å·±çå¨ç¨éã¨ç«éå«â¬ä½¸ç«¶é¦ååé¢ç´â¬ä¾æ±éç»îç?, layer:'ç»î¿ç°©çå¦ç´°é¶æ¡ç¥«é©è¹îéåî', layerClass:'l2' },
-  { id:'b5', title:'éåæé©æ´ªå¾ç¯æ­ç', author:'ç»¾ï¸¾å ªè·¯éæ°­ç¸', desc:'é¸å¨æé¶æ¡ç¥«æ´æç°é«æç·«éå²æ¤éçåµçä½¹æ§æµ£åº¢åéîå¯éæ¿çé²æ¦æ±éç¶ç´­é?, layer:'ç»î¿ç°©çå¦ç´°é¶æ¡ç¥«é©è¹îéåî', layerClass:'l2' },
-  { id:'b6', title:'é¶æ¡ç¥«æ¶îæ¸¶ç» â¬éæ æ®æµ?, author:'é­åæµæ¥£?, desc:'éîæ¹¡éæ ¦ç¯éå¼å§ç§å¶ç´é»æ®å§"æµ¼æ¿â¬ç¬ºâ¬ä½¸æ§çã£â¬ä½¹æ¤é?æ¶å¤î¦ç»±?, layer:'ç»î¿ç°©çå¦ç´°é¶æ¡ç¥«é©è¹îéåî', layerClass:'l2' },
-  // ç»î¿ç¬çå¦ç´°ç¹ç´å¬é¿å¶ç¶
-  { id:'b7', title:'é¸å¨æé©æ´ªå¾é¶æ¡ç¥«é¸å§å´¡', author:'é¾æ°îé»è½°ç¬£é½?, desc:'Aé²âå¯éæ¿çé²æç¾é¶æåå¨´ä½ºâ¼éå±½ææµ¼æ¿â¬å¼æå¨æâ¬ä½¸ç¾é¶æ ç¥é£ã£â¬ä½¹îé©å å¦§å®¸?, layer:'ç»î¿ç¬çå¦ç´°ç¹ç´å¬é¿å¶ç¶', layerClass:'l3' },
-  { id:'b8', title:'éµå¬«å¦¸éµå¬«ææµ£çºî°çã¡å§¤', author:'éæ­æ¹', desc:'æµ ã¨å¯éæå¨é¶ã¦îæ¸å¬«åª¶çï½ç¬å¯®çºãéå²ä¼©å¯®â¬çã å§é«ç²äº£éç½æ§º', layer:'ç»î¿ç¬çå¦ç´°ç¹ç´å¬é¿å¶ç¶', layerClass:'l3' },
-  { id:'b9', title:'ç¹æ°­å§éä½¸å¾çã å§é·îæ±', author:'é¾æ°îé»è½°ç¬£é½?, desc:'"å®¸ã¨ç¥«+ç¹æ°­å§"ç»îç®ç»î¿ç«´å¦å å¾é¨å«ç¬éç£ç¾å¯°?, layer:'ç»î¿ç¬çå¦ç´°ç¹ç´å¬é¿å¶ç¶', layerClass:'l3' },
-  // ç»îæ´çå¦ç´°çãç¡éçç¬
-  { id:'b10', title:'ç»éç¡éåçé?, author:'éã§æè·¯éºæç¸', desc:'æ¾¶æ°¬åé¬æ¿æ·®å¦¯â³ç·éä¾â¬åæé¬æ¿â¬å¦â¬ä½½åéæ¶æ¹éç·å¯', layer:'ç»îæ´çå¦ç´°çãç¡éçç¬', layerClass:'l4' },
-  { id:'b11', title:'éç·å¯', author:'éçºç¯æªéâî', desc:'æµ åº¡ç¯çåæéç»îæ´ï¹åéæ¬â¬åå§éä½½æ£ç¯ä½¸æ°é¦æ®ç´­éæä¸çµè§å§ç§å­æ®éææ¹¡è¤°åæ·', layer:'ç»îæ´çå¦ç´°çãç¡éçç¬', layerClass:'l4' },
-  { id:'b12', title:'å©î£îéåº¡çµç?, author:'æµ¼îãè·¯æ¤¹îçµé©åçµ', desc:'éå¤æ¥ç¯åæºéåî vs çå±¼è´é²æ£çºçï¸¼ç´é¸å¨æé©æ´ªå¾ç¹æ°­å§é¨å«îéîççº­â¬', layer:'ç»îæ´çå¦ç´°çãç¡éçç¬', layerClass:'l4' },
-  // ç»î¿ç°²çå¦ç´°æ©æ¶¢æ¨æµ£æ¶é´
-  { id:'b13', title:'é¶æ¡ç¥«éâ¬é²å¶î¦é¨åªç°¨', author:'éå¶å´å¯°ä»¿ç½âéå¬«æ', desc:'é«åæé¬æ¿æ·®éä¾îéâçéî â¬ä½ºîæµå±½ç°é¬æ¿â¬å¿ç´é©æå®é¶æ¡ç¥«éîå·', layer:'ç»î¿ç°²çå¦ç´°æ¤åº¨æ«ç» ï¼ææ¶åº¤îæ¶åç¸¾é?, layerClass:'l5' },
-  { id:'b14', title:'éçµæé¬Ñç®é½?, author:'ç¼æ¤¾ééå­¤å³°èé?, desc:'éåç½å¨âæç¼å¿ç¥¹é¨å«ç¸¾éåîéè§ç°®éå²îé¯æç«¶é¦è¹åª¯éîæ¹¡é¨å¯îé?, layer:'ç»î¿ç°²çå¦ç´°æ¤åº¨æ«ç» ï¼ææ¶åº¤îæ¶åç¸¾é?, layerClass:'l5' },
-  { id:'b15', title:'é²å¶î²éæ°¬î®é¨åªç°¨', author:'éåå§æ¿¡îç¯å£é¾å¤ç¬', desc:'10å§ã¦å¢¦é«ç²ç¬éç¿ éæµé¸¿å¨éï¼é´ç¼çç´å¯¤è¹çéî å¹ç» ï¼æå¦åç¦', layer:'ç»î¿ç°²çå¦ç´°æ¤åº¨æ«ç» ï¼ææ¶åº¤îæ¶åç¸¾é?, layerClass:'l5' }
+  // 绗竴灞傦細璐㈠晢鍚挋
+  { id:'b1', title:'瀵岀埜鐖哥┓鐖哥埜', author:'缃椾集鐗孤锋竻宕?, desc:'棰犺"鎵撳伐璧氶挶"瑙傚康锛屽缓绔嬭祫浜т笌璐熷€虹殑璁ょ煡妗嗘灦', layer:'绗竴灞傦細璐㈠晢鍚挋', layerClass:'l1' },
+  { id:'b2', title:'灏忕嫍閽遍挶', author:'鍗氬路鑸嶈垂灏?, desc:'鐢ㄧ璇濊閫忓偍钃勩€佸鍒╁拰琚姩鏀跺叆鏍稿績閫昏緫', layer:'绗竴灞傦細璐㈠晢鍚挋', layerClass:'l1' },
+  { id:'b3', title:'璐㈠姟鑷敱涔嬭矾', author:'鍗氬路鑸嶈垂灏?, desc:'7骞村唴瀹炵幇璐㈠姟鑷敱鐨勫疄鎿嶆楠わ紝"淇濋殰鈫掑畨鍏ㄢ啋鑷敱"涓夐樁娈垫ā鍨?, layer:'绗竴灞傦細璐㈠晢鍚挋', layerClass:'l1' },
+  // 绗簩灞傦細鎶曡祫鍩虹鐞嗚
+  { id:'b4', title:'鑱槑鐨勬姇璧勮€?, author:'鏈澃鏄幝锋牸闆峰巹濮?, desc:'浠峰€兼姇璧?鍦ｇ粡"锛屽己璋冨畨鍏ㄨ竟闄呫€佸競鍦哄厛鐢熴€侀暱鏈熻瑙?, layer:'绗簩灞傦細鎶曡祫鍩虹鐞嗚', layerClass:'l2' },
+  { id:'b5', title:'鍏卞悓鍩洪噾甯歌瘑', author:'绾︾堪路鍗氭牸', desc:'鎸囨暟鎶曡祫搴曞眰閫昏緫锛岀敤鏁版嵁璇佹槑浣庢垚鏈寚鏁板熀閲戦暱鏈熶紭鍔?, layer:'绗簩灞傦細鎶曡祫鍩虹鐞嗚', layerClass:'l2' },
+  { id:'b6', title:'鎶曡祫涓渶绠€鍗曠殑浜?, author:'閭卞浗楣?, desc:'鏈湡鍖栦环鍊兼姇璧勶紝鎻愮偧"浼板€笺€佸搧璐ㄣ€佹椂鏈?涓夎绱?, layer:'绗簩灞傦細鎶曡祫鍩虹鐞嗚', layerClass:'l2' },
+  // 绗笁灞傦細瀹炴垬鎿嶄綔
+  { id:'b7', title:'鎸囨暟鍩洪噾鎶曡祫鎸囧崡', author:'閾惰铻轰笣閽?, desc:'A鑲℃寚鏁板熀閲戝畾鎶曞叏娴佺▼锛屽惈浼板€兼柟娉曘€佸畾鎶曠瓥鐣ャ€佹鐩堟妧宸?, layer:'绗笁灞傦細瀹炴垬鎿嶄綔', layerClass:'l3' },
+  { id:'b8', title:'鎵嬫妸鎵嬫暀浣犺璐㈡姤', author:'鍞愭湞', desc:'浠ヨ寘鍙拌储鎶ユ渚嬫媶瑙ｄ笁寮犺〃锛岄伩寮€璐㈠姟閫犲亣闄烽槺', layer:'绗笁灞傦細瀹炴垬鎿嶄綔', layerClass:'l3' },
+  { id:'b9', title:'瀹氭姇鍗佸勾璐㈠姟鑷敱', author:'閾惰铻轰笣閽?, desc:'"宸ヨ祫+瀹氭姇"绉疮绗竴妗堕噾鐨勫畬鏁磋矾寰?, layer:'绗笁灞傦細瀹炴垬鎿嶄綔', layerClass:'l3' },
+  // 绗洓灞傦細璁ょ煡鏍煎眬
+  { id:'b10', title:'绌锋煡鐞嗗疂鍏?, author:'鏌ョ悊路鑺掓牸', desc:'澶氬厓鎬濈淮妯″瀷銆侀€嗗悜鎬濊€冦€佽兘鍔涘湀鍘熷垯', layer:'绗洓灞傦細璁ょ煡鏍煎眬', layerClass:'l4' },
+  { id:'b11', title:'鍘熷垯', author:'鐟灺疯揪鍒╂', desc:'浠庡畯瑙傚懆鏈熻搴﹀垎鏋愬€哄姟銆佽揣甯佸拰鍦扮紭鏀挎不瀵规姇璧勭殑闀挎湡褰卞搷', layer:'绗洓灞傦細璁ょ煡鏍煎眬', layerClass:'l4' },
+  { id:'b12', title:'婕鍗庡皵琛?, author:'浼】路椹皵鍩哄皵', desc:'鏈夋晥甯傚満鐞嗚 vs 琛屼负閲戣瀺瀛︼紝鎸囨暟鍩洪噾瀹氭姇鐨勫鏈熀纭€', layer:'绗洓灞傦細璁ょ煡鏍煎眬', layerClass:'l4' },
+  // 绗簲灞傦細杩涢樁浣撶郴
+  { id:'b13', title:'鎶曡祫鏈€閲嶈鐨勪簨', author:'闇嶅崕寰仿烽┈鍏嬫柉', desc:'閫嗗悜鎬濈淮銆侀闄╄瘑鍒€佺浜屽眰鎬濊€冿紝鐩村嚮鎶曡祫鏈川', layer:'绗簲灞傦細椋庨櫓绠＄悊涓庤涓哄績鐞?, layerClass:'l5' },
+  { id:'b14', title:'闈炵悊鎬х箒鑽?, author:'缃椾集鐗孤峰腑鍕?, desc:'鍒嗘瀽娉℃搏缁忔祹鐨勫績鐞嗗鏍规簮锛岃鎯曞競鍦虹媯鐑湡鐨勯闄?, layer:'绗簲灞傦細椋庨櫓绠＄悊涓庤涓哄績鐞?, layerClass:'l5' },
+  { id:'b15', title:'閲嶅鍋氬鐨勪簨', author:'钂傝姍濡疯壘鑾夊笇', desc:'10姝ユ墦閫犲畬鏁翠釜浜鸿储鍔＄郴缁燂紝寤虹珛闂幆绠＄悊妗嗘灦', layer:'绗簲灞傦細椋庨櫓绠＄悊涓庤涓哄績鐞?, layerClass:'l5' }
 ];
 
-// ============ çâæ¤éèµâ¬ä½ºî¸éå­ç´æµ è¯²å§ + çè®³åéè¾©æ¤é?============
+// ============ 璁℃椂鐘舵€佺鐞嗭紙浠诲姟 + 璇讳功鍏辩敤锛?============
 let timerState = null; // {type:'task'|'book', dateKey?, taskId?, bookId?, startTime, intervalId}
 
 function startTaskTimer(dateKey, taskId) {
@@ -591,7 +591,7 @@ function startTaskTimer(dateKey, taskId) {
 function startBookTimer(bookId) {
   if (timerState) endCurrentTimer(true);
   timerState = { type:'book', bookId, startTime: Date.now(), intervalId: null };
-  // æ¿¡åçæ©æ¨»çå¯®â¬æ¿®å¬®æ§çä¼ç´éåªîå¯®â¬æ¿®?  const rec = getBookRecord(bookId);
+  // 濡傛灉杩樻病寮€濮嬮槄璇伙紝鏍囪寮€濮?  const rec = getBookRecord(bookId);
   if (!rec) setBookRecord(bookId, { started: Date.now(), finished: null, durationSec: 0 });
   startTimerUI();
 }
@@ -623,8 +623,8 @@ function endCurrentTimer(autoSwitch) {
       setBookRecord(timerState.bookId, rec);
     }
     showToast(autoSwitch
-      ? `é´æç¬ é·îå§©ç¼æ´æ½«çâæ¤ è·¯ å®¸è¶îè¤°?${formatDuration(durSec)}`
-      : `é´æç¬ çâæ¤ç¼æ´æ½« è·¯ å®¸è¶îè¤°?${formatDuration(durSec)}`);
+      ? `鈴憋笍 鑷姩缁撴潫璁℃椂 路 宸茶褰?${formatDuration(durSec)}`
+      : `鈴憋笍 璁℃椂缁撴潫 路 宸茶褰?${formatDuration(durSec)}`);
   }
 
   timerState = null;
@@ -644,10 +644,10 @@ function updateTimerBar() {
   if (timerState.type === 'task') {
     const tasks = buildTasks(new Date(timerState.dateKey));
     const task = tasks.find(t => t.id === timerState.taskId);
-    document.getElementById('timerTaskName').textContent = task ? task.name : 'æµ è¯²å§';
+    document.getElementById('timerTaskName').textContent = task ? task.name : '浠诲姟';
   } else {
     const book = BOOK_LIST.find(b => b.id === timerState.bookId);
-    document.getElementById('timerTaskName').textContent = book ? 'é¦æ '+book.title : 'éå°î°';
+    document.getElementById('timerTaskName').textContent = book ? '馃摎 '+book.title : '闃呰';
   }
 }
 
@@ -658,21 +658,21 @@ function formatDuration(totalSec) {
 }
 function formatDurationLong(totalSec) {
   const m = Math.floor(totalSec / 60);
-  if (m >= 60) { const h = Math.floor(m/60); const rm = m%60; return `${h}çå¿æ¤${rm}éåæ`; }
-  return `${m}éåæ`;
+  if (m >= 60) { const h = Math.floor(m/60); const rm = m%60; return `${h}灏忔椂${rm}鍒嗛挓`; }
+  return `${m}鍒嗛挓`;
 }
 
-// ============ éµæ³å´±é«æç·« ============
+// ============ 鎵撳崱閫昏緫 ============
 function handleCheck(dateKey, taskId) {
   if (timerState && timerState.type === 'task' && timerState.dateKey === dateKey && timerState.taskId === taskId) {
     endCurrentTimer(false); return;
   }
   if (isChecked(dateKey, taskId)) {
     removeTaskRecord(dateKey, taskId);
-    showToast('å®¸æå½å¨å å¢¦é?);
+    showToast('宸插彇娑堟墦鍗?);
   } else {
     setTaskRecord(dateKey, taskId, Date.now(), 25 * 60);
-    showToast('é?éµæ³å´±é´æ¬å§é?);
+    showToast('鉁?鎵撳崱鎴愬姛锛?);
   }
   renderCheckinTab();
   updateStats();
@@ -685,7 +685,7 @@ function handleStartTaskTimer(dateKey, taskId) {
   startTaskTimer(dateKey, taskId);
 }
 
-// ============ çè®³åé¿å¶ç¶ ============
+// ============ 璇讳功鎿嶄綔 ============
 function handleBookTimer(bookId) {
   if (timerState && timerState.type === 'book' && timerState.bookId === bookId) {
     endCurrentTimer(false); return;
@@ -699,33 +699,33 @@ function handleFinishBook(bookId) {
   }
   const rec = getBookRecord(bookId);
   if (!rec || !rec.started) {
-    showToast('çå³°åå¯®â¬æ¿®å¬®æ§çè¯²åéåªîçè¯²ç¬');
+    showToast('璇峰厛寮€濮嬮槄璇诲啀鏍囪璇诲畬');
     return;
   }
   if (rec.finished) {
-    // éæ ¨ç§·éåªî
+    // 鍙栨秷鏍囪
     rec.finished = null;
     setBookRecord(bookId, rec);
-    showToast('å®¸æå½å¨å £î°ç¹å±¾ç£ç?);
+    showToast('宸插彇娑堣瀹屾爣璁?);
   } else {
     rec.finished = Date.now();
     setBookRecord(bookId, rec);
-    showToast('é¦å¸ é­îæ©çè¯²ç¬æ¶â¬éîç´');
+    showToast('馃帀 鎭枩璇诲畬涓€鏈紒');
   }
   renderReadingTab();
 }
 
-// ============ å¨åç ============
+// ============ 娓叉煋 ============
 let viewDate = new Date();
 
 function formatDate(d) {
   const now = new Date();
   const diffDays = Math.floor((d - new Date(now.getFullYear(),now.getMonth(),now.getDate())) / 86400000);
-  const dayNames = ['éã¦æ£©','éã¤ç«´','éã¤ç°©','éã¤ç¬','éã¥æ´','éã¤ç°²','éã¥å'];
-  const str = `${d.getFullYear()}éª?{d.getMonth()+1}é?{d.getDate()}é?${dayNames[d.getDay()]}`;
-  if (diffDays === 0) return 'é¦æ¶ æµ å©ã è·¯ ' + str;
-  if (diffDays === -1) return 'éã¥ã è·¯ ' + str;
-  if (diffDays === 1) return 'éåº¡ã è·¯ ' + str;
+  const dayNames = ['鍛ㄦ棩','鍛ㄤ竴','鍛ㄤ簩','鍛ㄤ笁','鍛ㄥ洓','鍛ㄤ簲','鍛ㄥ叚'];
+  const str = `${d.getFullYear()}骞?{d.getMonth()+1}鏈?{d.getDate()}鏃?${dayNames[d.getDay()]}`;
+  if (diffDays === 0) return '馃搶 浠婂ぉ 路 ' + str;
+  if (diffDays === -1) return '鏄ㄥぉ 路 ' + str;
+  if (diffDays === 1) return '鏄庡ぉ 路 ' + str;
   return str;
 }
 
@@ -744,11 +744,11 @@ function renderCheckinTab() {
   let html = '';
   if (!weekend && module) {
     html += `<div class="card" style="text-align:center;padding:12px;">
-      <span style="font-size:13px;color:var(--primary);font-weight:600;">é¦æ® å®¸ã¤ç¶éã¦Äé§æ¥çé¹î®ç´°é?{['æ¶â¬','æµ?,'æ¶?,'é¥?,'æµ?][getDayOfWeek(viewDate)-1]} é¥?<span style="color:#e54545;">${module}</span></span></div>`;
+      <span style="font-size:13px;color:var(--primary);font-weight:600;">馃搮 宸ヤ綔鏃ユā鍧楄疆鎹細鍛?{['涓€','浜?,'涓?,'鍥?,'浜?][getDayOfWeek(viewDate)-1]} 鈥?<span style="color:#e54545;">${module}</span></span></div>`;
   }
   if (weekend) {
     html += `<div class="card" style="text-align:center;padding:12px;">
-      <span style="font-size:13px;color:var(--warning);font-weight:600;">é¦å¹ éã¦æ¹¯æ¦å¯å¾æ¾¶åªâ¬å©æ¤éè¾¾ç´é¶å©å½éææ½¡éå æ£¿å¨£åå®³çï¸¿ç¯</span></div>`;
+      <span style="font-size:13px;color:var(--warning);font-weight:600;">馃幆 鍛ㄦ湯榛勯噾澶囪€冩椂闂达紝鎶婃彙鏁村潡鏃堕棿娣卞害瀛︿範</span></div>`;
   }
 
   for (let [section, sectionTasks] of Object.entries(sections)) {
@@ -766,13 +766,13 @@ function renderCheckinTab() {
       } else if (checked) {
         timerBtnHtml = `<span class="task-duration-tag visible">${formatDurationLong(dur)}</span>`;
       } else {
-        timerBtnHtml = `<button class="timer-btn start" onclick="handleStartTaskTimer('${dk}','${t.id}')">å¯®â¬æ¿®å¬­î¸é?/button>`;
+        timerBtnHtml = `<button class="timer-btn start" onclick="handleStartTaskTimer('${dk}','${t.id}')">寮€濮嬭鏃?/button>`;
       }
 
       html += `<div class="task-item${checked?' completed':''}${isTiming?' timing':''}"${optionalClass}>
-        <div class="task-check${checked?' checked':''}" onclick="handleCheck('${dk}','${t.id}')">é?/div>
+        <div class="task-check${checked?' checked':''}" onclick="handleCheck('${dk}','${t.id}')">鉁?/div>
         <div class="task-info">
-          <div class="task-name"><span style="margin-right:3px;">${t.icon||''}</span>${t.name}${t.optional?' <span style="font-size:10px;color:#999;">(éîâ¬?</span>':''}</div>
+          <div class="task-name"><span style="margin-right:3px;">${t.icon||''}</span>${t.name}${t.optional?' <span style="font-size:10px;color:#999;">(鍙€?</span>':''}</div>
           <div class="task-desc">${t.desc}</div>
           <div class="task-meta"><span class="task-time-tag">${t.time}</span></div>
         </div>
@@ -785,7 +785,7 @@ function renderCheckinTab() {
   const completed = tasks.filter(t => !t.optional && isChecked(dk, t.id)).length;
   const total = getTotalNonOptional(tasks);
   html += `<div class="card" style="text-align:center;">
-    <span style="font-size:13px;">è¤°æ´æ£©ç¹å±¾åé?strong style="color:var(--success);">${completed}</strong> / ${total} æ¤¤?/span>
+    <span style="font-size:13px;">褰撴棩瀹屾垚锛?strong style="color:var(--success);">${completed}</strong> / ${total} 椤?/span>
     <div class="week-progress-bar" style="margin-top:6px;"><div class="week-progress-fill" style="width:${total>0?(completed/total*100):0}%"></div></div>
   </div>`;
 
@@ -794,7 +794,7 @@ function renderCheckinTab() {
 
 function getTotalNonOptional(tasks) { return tasks.filter(t => !t.optional).length; }
 
-// ============ çè®³åçâ³åå¨åç ============
+// ============ 璇讳功璁″垝娓叉煋 ============
 function renderReadingTab() {
   const readingData = loadReadingData();
   const totalBooks = BOOK_LIST.length;
@@ -817,7 +817,7 @@ function renderReadingTab() {
   document.getElementById('booksReading').textContent = inProgress;
   document.getElementById('readingBar').style.width = (finishedCount/totalBooks*100)+'%';
 
-  // é¸å¤ç°éåç²å¨åç
+  // 鎸夊眰鍒嗙粍娓叉煋
   let layers = {};
   BOOK_LIST.forEach(b => {
     if (!layers[b.layer]) layers[b.layer] = { class: b.layerClass, books: [] };
@@ -826,7 +826,7 @@ function renderReadingTab() {
 
   let html = '';
   for (let [layerName, layerData] of Object.entries(layers)) {
-    html += `<div class="book-layer-title ${layerData.class}">é¦æ ${layerName}</div>`;
+    html += `<div class="book-layer-title ${layerData.class}">馃摌 ${layerName}</div>`;
     layerData.books.forEach(b => {
       const rec = readingData[b.id];
       const isFinished = rec && rec.finished;
@@ -841,20 +841,20 @@ function renderReadingTab() {
       } else if (isFinished) {
         btnHtml = '';
       } else {
-        btnHtml = `<button class="book-read-btn start-btn" onclick="handleBookTimer('${b.id}')">å¯®â¬æ¿®å¬®æ§ç?/button>`;
+        btnHtml = `<button class="book-read-btn start-btn" onclick="handleBookTimer('${b.id}')">寮€濮嬮槄璇?/button>`;
       }
 
       let metaHtml = '';
-      if (dur > 0) metaHtml += `<span class="book-duration-tag">é¦æ ${formatDurationLong(dur)}</span>`;
+      if (dur > 0) metaHtml += `<span class="book-duration-tag">馃摉 ${formatDurationLong(dur)}</span>`;
       if (isFinished) {
         const finDate = new Date(rec.finished);
-        metaHtml += `<span class="book-finished-tag">é?${finDate.getMonth()+1}/${finDate.getDate()}çè¯²ç¬</span>`;
+        metaHtml += `<span class="book-finished-tag">鉁?${finDate.getMonth()+1}/${finDate.getDate()}璇诲畬</span>`;
       } else if (hasStarted) {
-        metaHtml += `<span class="book-tag">éå°î°æ¶?/span>`;
+        metaHtml += `<span class="book-tag">闃呰涓?/span>`;
       }
 
       html += `<div class="book-item${isFinished?' finished':''}${isReadingNow?' reading':''}">
-        <div class="book-status-icon${isFinished?' finished':''}" onclick="handleFinishBook('${b.id}')">${isFinished?'é?:''}</div>
+        <div class="book-status-icon${isFinished?' finished':''}" onclick="handleFinishBook('${b.id}')">${isFinished?'鉁?:''}</div>
         <div class="book-info">
           <div class="book-title">${b.title}</div>
           <div class="book-author">${b.author}</div>
@@ -868,7 +868,7 @@ function renderReadingTab() {
   document.getElementById('bookListContainer').innerHTML = html;
 }
 
-// ============ ç¼ç»î¸ ============
+// ============ 缁熻 ============
 function renderStats() {
   const data = loadData();
   const now = new Date();
@@ -908,13 +908,13 @@ function renderStats() {
   document.getElementById('streakDays').textContent = streak;
   document.getElementById('streakCount').textContent = streak;
   document.getElementById('weekBar').style.width = weekRate + '%';
-  document.getElementById('weekText').textContent = `${weekDone} / ${weekTotal} æµ è¯²å§ç¹å±¾å`;
+  document.getElementById('weekText').textContent = `${weekDone} / ${weekTotal} 浠诲姟瀹屾垚`;
 
   const moduleSeconds = {};
   const moduleColors = {
-    'ç·â¬çî æç?:'#1a73e8', 'éãæéºã§æ':'#e54545', 'éä¼´åºéå´é´':'#f5a623',
-    'ç§å¬æ¡éåç½':'#0d9e6c', 'é¢å® î':'#8e44ad', 'çå±¾ç¥´ç¼çæ':'#e67e22',
-    'éèµæç¯æ­ç':'#3498db', 'é¿æ¬î½é¬è¤ç²¨':'#7f8c8d', 'å¦¯Â¤â¬?:'#e91e63'
+    '瑷€璇悊瑙?:'#1a73e8', '鍒ゆ柇鎺ㄧ悊':'#e54545', '鏁伴噺鍏崇郴':'#f5a623',
+    '璧勬枡鍒嗘瀽':'#0d9e6c', '鐢宠':'#8e44ad', '琛屾祴缁煎悎':'#e67e22',
+    '鏃舵斂甯歌瘑':'#3498db', '閿欓鎬荤粨':'#7f8c8d', '妯¤€?:'#e91e63'
   };
 
   const allDates = Object.keys(data);
@@ -928,17 +928,17 @@ function renderStats() {
       const val = dayData[taskId];
       const dur = typeof val === 'number' ? 25 * 60 : (val.dur || 25 * 60);
       const task = tasks.find(t => t.id === taskId);
-      let cat = 'çå±¾ç¥´ç¼çæ';
+      let cat = '琛屾祴缁煎悎';
       if (task) {
         const nm = task.name;
-        if (nm.includes('éèµæ')||nm.includes('éã¨î°')) cat='éèµæç¯æ­ç';
-        else if (nm.includes('ç·â¬ç?)) cat='ç·â¬çî æç?;
-        else if (nm.includes('éãæ')) cat='éãæéºã§æ';
-        else if (nm.includes('éä¼´åº')) cat='éä¼´åºéå´é´';
-        else if (nm.includes('ç§å¬æ¡')) cat='ç§å¬æ¡éåç½';
-        else if (nm.includes('é¢å® î')) cat='é¢å® î';
-        else if (nm.includes('é¿æ¬î½')) cat='é¿æ¬î½é¬è¤ç²¨';
-        else if (nm.includes('å¦¯Â¤â¬?)) cat='å¦¯Â¤â¬?;
+        if (nm.includes('鏃舵斂')||nm.includes('鏅ㄨ')) cat='鏃舵斂甯歌瘑';
+        else if (nm.includes('瑷€璇?)) cat='瑷€璇悊瑙?;
+        else if (nm.includes('鍒ゆ柇')) cat='鍒ゆ柇鎺ㄧ悊';
+        else if (nm.includes('鏁伴噺')) cat='鏁伴噺鍏崇郴';
+        else if (nm.includes('璧勬枡')) cat='璧勬枡鍒嗘瀽';
+        else if (nm.includes('鐢宠')) cat='鐢宠';
+        else if (nm.includes('閿欓')) cat='閿欓鎬荤粨';
+        else if (nm.includes('妯¤€?)) cat='妯¤€?;
       }
       moduleSeconds[cat] = (moduleSeconds[cat] || 0) + dur;
     });
@@ -949,21 +949,21 @@ function renderStats() {
 
   let barsHtml = '';
   if (activeModules.length === 0) {
-    barsHtml = '<div style="text-align:center;color:var(--text-secondary);padding:20px;">éåæ£¤éµæ³å´±éçåµ</div>';
+    barsHtml = '<div style="text-align:center;color:var(--text-secondary);padding:20px;">鏆傛棤鎵撳崱鏁版嵁</div>';
   } else {
     activeModules.forEach(([name, sec]) => {
       const pct = Math.round(sec / maxSec * 100);
       const color = moduleColors[name] || '#1a73e8';
       const min = Math.round(sec / 60);
       barsHtml += `<div class="module-bar">
-        <div class="module-bar-label"><span>${name}</span><span>${min}éåæ</span></div>
+        <div class="module-bar-label"><span>${name}</span><span>${min}鍒嗛挓</span></div>
         <div class="module-bar-track"><div class="module-bar-fill" style="width:${pct}%;background:${color};"></div></div>
       </div>`;
     });
   }
   document.getElementById('moduleBars').innerHTML = barsHtml;
 
-  // æ©?æ¾¶âæ£©é?  let calHtml = '';
+  // 杩?澶╂棩鍘?  let calHtml = '';
   for (let i = 6; i >= 0; i--) {
     const d = new Date(now); d.setDate(now.getDate() - i);
     const dk = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
@@ -977,8 +977,8 @@ function renderStats() {
     const isToday = dk === todayKey();
     calHtml += `<div style="text-align:center;">
       <div style="font-size:10px;color:var(--text-secondary);">${d.getMonth()+1}/${d.getDate()}</div>
-      <div style="width:34px;height:34px;border-radius:10px;background:${bgColor};margin:2px auto;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#fff;${isToday?'box-shadow:0 0 0 3px '+bgColor+'40;':''}">${done>0?done:'è·¯'}</div>
-      <div style="font-size:10px;color:var(--text-secondary);">${['æ¶â¬','æµ?,'æ¶?,'é¥?,'æµ?,'é?,'é?][(d.getDay()+6)%7]}</div>
+      <div style="width:34px;height:34px;border-radius:10px;background:${bgColor};margin:2px auto;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#fff;${isToday?'box-shadow:0 0 0 3px '+bgColor+'40;':''}">${done>0?done:'路'}</div>
+      <div style="font-size:10px;color:var(--text-secondary);">${['涓€','浜?,'涓?,'鍥?,'浜?,'鍏?,'鏃?][(d.getDay()+6)%7]}</div>
     </div>`;
   }
   document.getElementById('calendarGrid').innerHTML = calHtml;
@@ -986,7 +986,7 @@ function renderStats() {
 
 function updateStats() { renderStats(); }
 
-// ============ Tabéå¨å´² ============
+// ============ Tab鍒囨崲 ============
 function switchTab(tabId) {
   document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
   document.getElementById(tabId).classList.add('active');
@@ -1007,7 +1007,7 @@ function showToast(msg) {
   t._timeout = setTimeout(() => t.classList.remove('show'), 1800);
 }
 
-// ============ éæ¿îé?============
+// ============ 鍒濆鍖?============
 renderCheckinTab();
 renderReadingTab();
 updateStats();
