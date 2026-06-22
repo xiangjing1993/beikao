@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>南沙公务员备考打卡</title>
+<title>éæ¥çéîå§éæ¨ºî¬é°å©å¢¦é?/title>
 <style>
 :root {
   --primary: #1a73e8;
@@ -50,7 +50,7 @@ body {
 .tab-content { display: none; padding: 14px; max-width: 720px; margin: 0 auto; }
 .tab-content.active { display: block; }
 
-/* 计时浮条 */
+/* çâæ¤å¨´î½æ½¯ */
 .timer-bar {
   position: fixed; top: var(--header-height); left: 0; right: 0; z-index: 99;
   background: #1a1a2e; color: #fff; padding: 8px 16px;
@@ -66,7 +66,7 @@ body {
   border-radius: 16px; font-size: 12px; font-weight: 600; cursor: pointer;
 }
 
-/* 底部导航 */
+/* æ´æ¢å´çµè°å - 4æ¶çab */
 .bottom-nav {
   position: fixed; bottom: 0; left: 0; right: 0; height: var(--nav-height);
   background: var(--card); border-top: 1px solid var(--border);
@@ -75,12 +75,12 @@ body {
 .nav-item {
   flex: 1; display: flex; flex-direction: column; align-items: center;
   justify-content: center; cursor: pointer; color: var(--text-secondary);
-  transition: color 0.2s; font-size: 11px; gap: 4px;
+  transition: color 0.2s; font-size: 10px; gap: 3px; padding: 4px 2px;
 }
 .nav-item.active { color: var(--primary); font-weight: 600; }
-.nav-item .nav-icon { font-size: 21px; }
+.nav-item .nav-icon { font-size: 19px; }
 
-/* 卡片 */
+/* éï¼å¢ */
 .card {
   background: var(--card); border-radius: var(--radius);
   padding: 16px; margin-bottom: 12px; box-shadow: var(--shadow);
@@ -92,15 +92,13 @@ body {
 }
 .card-title .icon { font-size: 19px; }
 
-/* 任务列表 */
+/* æµ è¯²å§éæ¥ã */
 .task-section { margin-bottom: 12px; }
 .task-section-label {
   font-size: 12px; font-weight: 600; color: var(--primary);
   margin-bottom: 6px; display: flex; align-items: center; gap: 6px;
 }
-.task-section-label .dot {
-  width: 7px; height: 7px; border-radius: 50%; background: var(--primary);
-}
+.task-section-label .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--primary); }
 .task-item {
   display: flex; align-items: center; padding: 10px;
   background: var(--bg); border-radius: 10px; margin-bottom: 6px;
@@ -139,7 +137,7 @@ body {
 }
 .task-duration-tag.visible { display: inline; }
 
-/* 计时按钮 */
+/* çâæ¤é¸å¤æ³ */
 .timer-btn {
   padding: 5px 12px; border-radius: 16px; font-size: 11px;
   font-weight: 600; cursor: pointer; border: none; white-space: nowrap;
@@ -161,7 +159,7 @@ body {
   50% { opacity: 0.3; }
 }
 
-/* 统计面板 */
+/* ç¼ç»î¸éã¡æ¾ */
 .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
 .stat-card {
   background: var(--card); border-radius: var(--radius); padding: 14px 10px;
@@ -184,7 +182,67 @@ body {
 .module-bar-track { height: 8px; background: #e8ecf1; border-radius: 4px; overflow: hidden; }
 .module-bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s ease; }
 
-/* 攻略Tab */
+/* ===== çè®³åçâ³åéå³°ç´¡ ===== */
+.reading-stats-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 12px; }
+.reading-stat-card {
+  background: var(--card); border-radius: var(--radius); padding: 14px;
+  text-align: center; box-shadow: var(--shadow); border: 1px solid var(--border);
+}
+.reading-stat-value { font-size: 22px; font-weight: 700; color: #8e44ad; line-height: 1; }
+.reading-stat-label { font-size: 11px; color: var(--text-secondary); margin-top: 4px; }
+
+.book-layer-title {
+  font-size: 14px; font-weight: 600; margin: 14px 0 8px;
+  padding: 6px 10px; border-radius: 8px; display: flex; align-items: center; gap: 6px;
+}
+.book-layer-title.l1 { background: #e8f5e9; color: #2e7d32; }
+.book-layer-title.l2 { background: #e3f2fd; color: #1565c0; }
+.book-layer-title.l3 { background: #fff3e0; color: #e65100; }
+.book-layer-title.l4 { background: #f3e5f5; color: #7b1fa2; }
+.book-layer-title.l5 { background: #fce4ec; color: #c62828; }
+
+.book-item {
+  display: flex; align-items: flex-start; padding: 12px;
+  background: var(--bg); border-radius: 10px; margin-bottom: 6px;
+  gap: 10px; transition: all 0.2s;
+}
+.book-item.finished { background: #e8f5e9; opacity: 0.85; }
+.book-item.finished .book-title { text-decoration: line-through; color: #999; }
+.book-item.reading { background: #e3f2fd; border: 1.5px solid #90caf9; }
+.book-status-icon {
+  width: 28px; height: 28px; border-radius: 50%; display: flex;
+  align-items: center; justify-content: center; font-size: 14px;
+  flex-shrink: 0; border: 2px solid #ccc; cursor: pointer; transition: all 0.3s;
+}
+.book-status-icon.finished { background: var(--success); border-color: var(--success); color: #fff; animation: popIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.book-info { flex: 1; min-width: 0; }
+.book-title { font-size: 14px; font-weight: 600; }
+.book-author { font-size: 12px; color: var(--primary); margin-top: 2px; }
+.book-desc { font-size: 11px; color: var(--text-secondary); margin-top: 3px; line-height: 1.4; }
+.book-meta { display: flex; align-items: center; gap: 6px; margin-top: 4px; flex-wrap: wrap; }
+.book-tag {
+  font-size: 10px; padding: 2px 7px; border-radius: 10px;
+  background: #f3e5f5; color: #7b1fa2; font-weight: 500;
+}
+.book-duration-tag {
+  font-size: 10px; color: #8e44ad; background: #f3e5f5;
+  padding: 2px 7px; border-radius: 10px; font-weight: 500;
+}
+.book-finished-tag {
+  font-size: 10px; color: #2e7d32; background: #e8f5e9;
+  padding: 2px 7px; border-radius: 10px; font-weight: 500;
+}
+.book-read-btn {
+  padding: 4px 10px; border-radius: 14px; font-size: 10px;
+  font-weight: 600; cursor: pointer; border: none; white-space: nowrap;
+  transition: all 0.2s; flex-shrink: 0;
+}
+.book-read-btn.start-btn { background: #8e44ad; color: #fff; }
+.book-read-btn.start-btn:active { background: #7b1fa2; }
+.book-read-btn.stop-btn { background: #e54545; color: #fff; animation: pulse 1.5s infinite; }
+.book-read-btn.stop-btn .live-dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: #fff; margin-right: 3px; animation: blink 0.8s infinite; }
+
+/* éè¤æTab */
 .guide-section { margin-bottom: 16px; }
 .guide-section h3 {
   font-size: 15px; font-weight: 600; margin-bottom: 8px;
@@ -217,7 +275,7 @@ body {
 }
 .toast.show { opacity: 1; }
 
-/* 日期导航 */
+/* éã¦æ¹¡çµè°å */
 .date-nav { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .date-nav .date-display { font-size: 14px; font-weight: 600; flex: 1; text-align: center; }
 .date-nav .nav-arrow {
@@ -233,149 +291,179 @@ body {
   padding: 12px; margin: 10px 0; font-size: 12px; line-height: 1.7;
 }
 
-/* 响应式 */
+/* éå¶ç°²å¯®?*/
 @media (min-width: 600px) {
   .tab-content { padding: 18px 22px; }
   .stat-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .reading-stats-row { grid-template-columns: repeat(4, 1fr); }
   .header { padding: 14px 24px; }
 }
 </style>
 </head>
 <body>
 
-<!-- 顶部 -->
+<!-- æ¤¤å å´ -->
 <div class="header">
-  <h1>南沙公务员备考打卡</h1>
-  <div class="streak-badge"><span class="fire">🔥</span> 连续 <span id="streakCount">0</span> 天</div>
+  <h1>éæ¥çéîå§éæ¨ºî¬é°å©å¢¦é?/h1>
+  <div class="streak-badge"><span class="fire">é¦æ</span> æ©çµç» <span id="streakCount">0</span> æ¾¶?/div>
 </div>
 
-<!-- 计时浮条 -->
+<!-- çâæ¤å¨´î½æ½¯ -->
 <div class="timer-bar" id="timerBar">
   <div>
-    <span class="timer-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#4caf50;margin-right:6px;animation:blink 0.8s infinite;"></span>
-    <span class="timer-task" id="timerTaskName">任务名</span>
+    <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#4caf50;margin-right:6px;animation:blink 0.8s infinite;"></span>
+    <span class="timer-task" id="timerTaskName">æµ è¯²å§é?/span>
   </div>
   <div class="timer-display" id="timerDisplay">00:00</div>
-  <button class="timer-stop-btn" onclick="stopTimer()">结束计时</button>
+  <button class="timer-stop-btn" onclick="stopTimer()">ç¼æ´æ½«çâæ¤</button>
 </div>
 
 <div id="toast" class="toast"></div>
 
-<!-- Tab 1: 今日打卡 -->
+<!-- Tab 1: æµ å©æ£©éµæ³å´± -->
 <div class="tab-content active" id="tab-checkin">
   <div class="date-nav">
-    <div class="nav-arrow" onclick="shiftDate(-1)">◀</div>
+    <div class="nav-arrow" onclick="shiftDate(-1)">é¼â¬</div>
     <div class="date-display" id="dateDisplay"></div>
-    <div class="nav-arrow" onclick="shiftDate(1)">▶</div>
+    <div class="nav-arrow" onclick="shiftDate(1)">é»?/div>
   </div>
   <div id="taskContainer"></div>
 </div>
 
-<!-- Tab 2: 备考攻略 -->
+<!-- Tab 2: æ¾¶åªâ¬å©æ¾é£?-->
 <div class="tab-content" id="tab-guide">
   <div class="card guide-section">
-    <h3>📘 行测五大模块策略</h3>
-    <h4>1. 言语理解与表达（约30题）</h4>
-    <p>核心：逻辑填空抓语境（转折/递进/并列），片段阅读抓主旨句（首尾句、转折后）。每天坚持20题，积累高频成语300组。</p>
-    <h4>2. 判断推理（约35题）</h4>
-    <p>图形推理熟记位置/样式/数量规律；定义判断抓关键要件；类比推理理清词间关系；逻辑判断掌握加强削弱公式。推荐花生十三的判断体系。</p>
-    <h4>3. 数量关系（约10-15题）</h4>
-    <p>广东数量偏简单，重点突破工程问题、行程问题、利润问题、排列组合。掌握代入排除、方程法、赋值法。目标：10题对7题即可，不恋战。</p>
-    <h4>4. 资料分析（约15-20题）</h4>
-    <p>务必拿满分模块！熟记基期/现期/增长率/比重/平均数公式。速算技巧：截位直除、特征数字法、差分法。每天2套计时训练，目标25分钟内完成。</p>
-    <h4>5. 常识判断（约15题）</h4>
-    <p>时政为主+法律+科技+文史。每天晨读30分钟时政（学习强国+人民日报），南沙区情必考（自贸区政策、大湾区规划）。</p>
+    <h3>é¦æ çå±¾ç¥´æµæ¿ãå¦¯â³æ½¡ç»æ «æ</h3>
+    <h4>1. ç·â¬çî æçï½ç¬çã¨æªéå ¢å®³30æ£°æ©ç´</h4>
+    <p>éç¨¿ç¸¾éæ°¶â¬æç·«æ¿î¤âé¶æ¹î¢æ¾§å¿ç´æîå§/é«æç¹/éªè·ºåªéå¤ç´éå¨îéå°î°é¶æ²å¯éã¥å½éå ¥î»çæ§å½éä½½æµé¶æ¨ºæéå¤â¬åç¡æ¾¶âæ½¥é¸?0æ£°æ©ç´ç»îç®æ¥æ©î¶é´æ¯î¢300ç¼å©â¬?/p>
+    <h4>2. éãæéºã§æéå ¢å®³35æ£°æ©ç´</h4>
+    <p>é¥æ§è°éºã§æéç»îæµ£å¶ç/éå³°ç´¡/éä¼´åºçå«ç·¥éæ¶ç¾æ¶å¤å½éîå§éæ½æ­çä½·æ¬¢éæ¶è¢«å§£æå¸¹éåæå¨å°çéæå§ç»¯ä¼ç´±é«æç·«éãæéºå±¾å½éç²å·±éå©æ¥éîç´¡éåå¸¹é½æ¯å§³é¢ç·å´æ¶å¤æ®éãææµ£æ¶é´é?/p>
+    <h4>3. éä¼´åºéå´é´éå ¢å®³10-15æ£°æ©ç´</h4>
+    <p>éªå¤¸ç¬¢éä¼´åºéå¿çéæªç´é²å¶å£ç»ä½ºç¬å®¸ã§â¼éîî½éä½½îç»å¬®æ£¶æ£°æ¨¸â¬ä½¸åå¨ï¹æ£¶æ£°æ¨¸â¬ä½¹å¸éæ¥ç²éå â¬åå¸é»â²å¬éã¦å¸éãâ¬ä½¹æç»å¬«ç¡¶éä½½ç¥´éå¼ç¡¶éåæ´°éå·ç´°10æ£°æ¨ºî®7æ£°æ¨ºåµéî¤ç´æ¶å¶äº±é´æ¨¸â¬?/p>
+    <h4>4. ç§å¬æ¡éåç½éå ¢å®³15-20æ£°æ©ç´</h4>
+    <p>éâ³ç¹é·æå¼§éåÄé§æ¥ç´éç»îé©çæ¹¡/éçæ¹¡/æ¾§çºæ±é?å§£æå¸/éªå²æ½éæ¿åå¯®å¿â¬åâ¬çºç»é¶â¬å®¸Ñç´°é´îç¶é©æ®æ«éä½ºå£å¯°ä½¹æçæ¥ç¡¶éä½¸æ¨éåç¡¶éåç¡æ¾¶?æ¿æ¥î¸éæ°îç¼å¿ç´é©î½ç£25éåæéå­ç¬é´æ©â¬?/p>
+    <h4>5. ç¯æ­çéãæéå ¢å®³15æ£°æ©ç´</h4>
+    <p>éèµææ¶è½°å¯+å¨æç·¥+ç»æå¦§+éå§å½¶éåç¡æ¾¶âæ«ç?0éåæéèµæéå îæ¶ç²å·±é¥?æµçç¯éã¦å§¤éå¤ç´éæ¥çéçåè¹å°â¬å¿ç´é·îé¤éçæç»æ ¥â¬ä½¸ãå©æ§å°¯çå«åéå¤â¬?/p>
   </div>
 
   <div class="card guide-section">
-    <h3>✍️ 申论备考方法</h3>
-    <p><strong>小题（概括/分析/对策）：</strong>答案全部来自材料，学会"抄"材料——抓关键词、高频词、总结句。概括题分条列点，每条"总括句+展开"。</p>
-    <p><strong>公文写作：</strong>掌握15种常见公文格式（通知、报告、意见、函等），重点是格式规范和语言得体。广东常考简报、工作方案类。</p>
-    <p><strong>大作文：</strong>五段三分式结构（开头-三个分论点-结尾），分论点从材料中提炼。每周至少写1篇完整大作文，找站长申论批改或自评复盘。积累10个通用开头模板和5个结尾模板。</p>
-    <p><strong>书写：</strong>字迹工整能提3-5分。每天练字15分钟。</p>
+    <h3>éå¶ç¬ é¢å® îæ¾¶åªâ¬å©æå¨?/h3>
+    <p><strong>çå¿î½éå î§é·?éåç½/çµå­ç¥éå¤ç´°</strong>ç»æîéã©å´éã¨åéæ­æ¡éå±½îæµ¼?é¶?éæ­æ¡é¥æºâ¬æå§éæ½æ­çå¶â¬ä¾ç®æ£°æ£çéä½¹â¬è¤ç²¨éã£â¬åî§é·îî½éåæ½¯éæ¥å£éå±¾ç¡é?é¬ç»å«­é?çæç´"é?/p>
+    <p><strong>éîæéæ¬ç¶é?/strong>éºå±¾å½15ç»å¶ç¶çä½¸åéå¨ç¸å¯®å¿¥ç´é«æ°±ç¡éä½¹å§¤éå¨¿â¬ä½¹å°çä½µâ¬ä½¸å±ç»å¤ç´éå²å¸éè§æ§¸éçç´¡çå®å¯éå²î¢ç·â¬å¯°æ¤¾ç¶éåç®æ¶æ»ç¶é°åªçé¶ã£â¬ä½¸ä¼æµ£æ»æå¦å ¢è¢«é?/p>
+    <p><strong>æ¾¶Ñç¶éå·ç´°</strong>æµæîæ¶å¤åå¯®å¿ç²¨éå¶ç´å¯®â¬æ¾¶?æ¶å¤ééåîé?ç¼æ³ç¬éå¤ç´éåîééç² éæ­æ¡æ¶îå½éç¬ºâ¬åç¡éã¨å¦çæå1ç»¡å§ç¬éæãæµ£æ»æéå±¾å£ç»æ¬æ±é¢å® îéµè§æ¼é´æ ¬åçå«î²é©æ¨¸â¬åÐç»±?0æ¶îâ¬æ°±æ¤å¯®â¬æ¾¶å­Äéå®æ°5æ¶îç²¨çç¬Äéè£¤â¬?/p>
+    <p><strong>æ¶ï¹åé?/strong>çæ¥æå®¸ã¦æ£é³è¥å½3-5éåâ¬åç¡æ¾¶âç²ç?5éåæé?/p>
   </div>
 
   <div class="card guide-section">
-    <h3>📍 南沙区情考点精要</h3>
+    <h3>é¦æ· éæ¥çéçåé°åªå£ç»®æî¦</h3>
     <div class="highlight-box">
-      <p><strong>定位：</strong>南沙是粤港澳大湾区几何中心，广州唯一城市副中心，国家级新区+自贸试验区+粤港澳全面合作示范区"三区叠加"。</p>
-      <p><strong>南沙方案（2022年6月国务院印发）：</strong>三大先行区——庆盛枢纽、南沙湾、南沙科学城；五大重点任务。核心关键词：科技创新、青年创业、规则衔接、高水平开放。</p>
-      <p><strong>双15%税收优惠：</strong>鼓励类产业企业减按15%征收企业所得税；港澳居民及境外高端紧缺人才个税超15%部分免征。</p>
-      <p><strong>产业方向：</strong>智能网联与新能源汽车、新一代信息技术、生物医药与健康、航空航天、海洋科技。</p>
-      <p><strong>交通枢纽：</strong>深中通道南沙线、南沙港铁路、地铁18号线（全国最快地铁，160km/h）、22号线。</p>
-      <p><strong>民生项目：</strong>港人子弟学校、中山一院南沙院区、广东省中医院南沙医院。</p>
-      <p><strong>生态：</strong>南沙湿地（候鸟天堂）、黄山鲁森林公园、蕉门河碧道。</p>
+      <p><strong>ç¹æ°«ç¶é?/strong>éæ¥çéîè å¨îå¢æ¾¶Ñåéååæµ£æèè¹å¿ç´éªå®çªéîç«´é©åº¡ç«¶éîèè¹å¿ç´é¥èîç»¾Ñæé?é·îé¤çæ¢çé?ç»®ãèå©¢å²åéã ææµ£æ»ãé¼å¨å°¯"æ¶å¤å°¯éç²å§"é?/p>
+      <p><strong>éæ¥çéè§îé?022éª?éå æµéï¿ æ«éæ¿å½éå¤ç´°</strong>æ¶å¤ãéå £îéè¡¡â¬æºâ¬æ¿ç°¡é©æ¶çç»¾å§â¬ä½¸å´¡å¨æ¬åéä½¸å´¡å¨æ¬îçï¹çéæ¶ç°²æ¾¶Ñå¸ééæ¢éÂ°â¬åç³è¹å¨å§é¿î¿çéæ°±îé¶â¬éæ¶æéä¾æ½éªæå±æ¶æ°¥â¬ä½½îéæ¬îéºã£â¬ä¾ç®å§æé©å¯®â¬éä¿±â¬?/p>
+      <p><strong>é?5%ç»åº¢æ¹æµ¼æ¨»å¬é?/strong>æ¦§æ³å§³ç»«è®³éªæ¶æ°«ç´æ¶æ°¬åºé¸?5%å¯°ä½¹æ¹æµ¼ä½·ç¬éµâ¬å¯°æ¥â£éæ¶èå©¢å²ç³å§æå¼·æ¾§å¨î»æ¥æ¨¼î¬ç»±Ñå·±æµçå¢ æ¶îâ£ç?5%é®ã¥åéå¶ç·é?/p>
+      <p><strong>æµÑç¬éç°æé?/strong>éé¸¿åç¼æ£ä»æ¶åº¢æé³è¥ç°®å§¹åæºéä½¹ææ¶â¬æµ ï½ä¿é­îå¦§éîâ¬ä½ºæéâå°°é½îç¬éã¥æéä½½åç»é¸¿åæ¾¶â¿â¬ä½¹æ£å¨²å¬¬îé¶â¬é?/p>
+      <p><strong>æµãâ¬æ°­çç»¾æ¤ç´°</strong>å¨£åèé«æ°¶äº¾éæ¥çç»¾è£¤â¬ä½¸å´¡å¨æ¬èé¾ä½½ç¾éä½¸æ¹´é¾?8éé£åéå åé¥è¥æ¸¶è¹î¢æ¹´é¾ä¾ç´160km/héå¤â¬?2éé£åé?/p>
+      <p><strong>å§æ ææ¤¤å­æ´°é?/strong>å¨îæ±çæ¬ç´µçï¸½çéä½·èçåç«´éã å´¡å¨æ¬æ«éæâ¬ä½¸ç®æ¶æ»æ¸·æ¶îå°°éã å´¡å¨æ¬å°°éî¬â¬?/p>
+      <p><strong>é¢ç¸â¬ä¾ç´°</strong>éæ¥çå©å®æ¹´éå â¬æ¬ç¬©æ¾¶âçéå¤â¬ä¾ç²çéç¾å¦«î½çéîæ´¯éä½½æ§éã¦æ¸¤çº°Ñäº¾é?/p>
     </div>
   </div>
 
   <div class="card guide-section">
-    <h3>🎬 B站备考课程推荐</h3>
-    <div class="course-card"><div class="up">粉笔公考</div><div class="desc">公务员考试第一品牌，行测系统课+申论精讲，附带智能批改。适合零基础入门，课程体系最完整。</div><div class="tags"><span class="tag">系统课</span><span class="tag">零基础</span><span class="tag">全科</span></div></div>
-    <div class="course-card"><div class="up">刘文超Vin</div><div class="desc">资料分析+数量关系天花板级讲师，速算技巧独步天下。适合有基础后提速提分，讲解风格风趣幽默。</div><div class="tags"><span class="tag">资料分析</span><span class="tag">数量关系</span><span class="tag">速算</span></div></div>
-    <div class="course-card"><div class="up">花生十三</div><div class="desc">判断推理+资料分析王牌讲师。独创判断推理体系，逻辑清晰。资料分析的"415份数法"和"盐水思想"广为流传。</div><div class="tags"><span class="tag">判断推理</span><span class="tag">资料分析</span><span class="tag">进阶</span></div></div>
-    <div class="course-card"><div class="up">站长申论</div><div class="desc">申论领域最具影响力UP主之一，大作文框架方法论极强，提供批改服务。适合申论想冲75+的考生。</div><div class="tags"><span class="tag">申论</span><span class="tag">大作文</span><span class="tag">批改</span></div></div>
-    <div class="course-card"><div class="up">李梦娇（华图教育）</div><div class="desc">常识判断专项，口诀记忆法非常高效。时政热点更新及时，适合常识薄弱的同学快速提分。</div><div class="tags"><span class="tag">常识</span><span class="tag">时政</span><span class="tag">口诀</span></div></div>
-    <div class="course-card"><div class="up">钩不了沉</div><div class="desc">行测全科讲解，逻辑严密，适合有基础的考生系统梳理。数量关系和逻辑判断尤其出彩。</div><div class="tags"><span class="tag">行测全科</span><span class="tag">进阶</span></div></div>
-    <div class="course-card"><div class="up">小马哥公考</div><div class="desc">申论+面试双料讲师，讲解接地气、实操性强。大作文素材积累非常丰富，适合在职考生碎片化学习。</div><div class="tags"><span class="tag">申论</span><span class="tag">面试</span><span class="tag">素材</span></div></div>
-    <div class="course-card"><div class="up">公考七七</div><div class="desc">以短视频形式拆解真题，每个视频5-8分钟，适合通勤时间学习。言语和判断专项最为出彩。</div><div class="tags"><span class="tag">碎片化</span><span class="tag">言语</span><span class="tag">判断</span></div></div>
-    <div class="course-card"><div class="up">面试学长</div><div class="desc">结构化面试专项，模拟答题+逐题点评，还原真实考场氛围。适合笔试通过后突击面试。</div><div class="tags"><span class="tag">面试</span><span class="tag">结构化</span></div></div>
-    <div class="course-card"><div class="up">公考齐麟</div><div class="desc">数量关系+资料分析双专项，讲解细致，适合基础较弱的同学。有大量免费刷题视频。</div><div class="tags"><span class="tag">数量</span><span class="tag">资料</span><span class="tag">刷题</span></div></div>
-    <div class="course-card"><div class="up">思路薛</div><div class="desc">判断推理专项，图形推理讲解独到，空间重构技巧简单好用。适合图推薄弱的考生。</div><div class="tags"><span class="tag">判断推理</span><span class="tag">图推</span></div></div>
-    <div class="course-card"><div class="up">大宝公考</div><div class="desc">申论素材积累型UP主，每日更新时政热点+申论规范表达，适合晨读和素材储备。</div><div class="tags"><span class="tag">申论素材</span><span class="tag">时政</span></div></div>
-    <div class="course-card"><div class="up">公考老贾</div><div class="desc">行测真题精讲，以历年国考和省考真题为蓝本逐题拆解。适合刷题阶段使用。</div><div class="tags"><span class="tag">真题</span><span class="tag">行测</span></div></div>
-    <div class="course-card"><div class="up">梦娇老师（常识专项）</div><div class="desc">常识口诀速记系列，把枯燥的常识编成顺口溜，记忆效率极高。法律常识专题尤为推荐。</div><div class="tags"><span class="tag">常识</span><span class="tag">法律</span><span class="tag">速记</span></div></div>
+    <h3>é¦å¹ Bç»æ¬î¬é°å­î³ç»å¬«å¸¹é½?/h3>
+    <div class="course-card"><div class="up">ç»®å¤çªéîâ¬?/div><div class="desc">éîå§éæ¨¿â¬å­ç¯ç»î¿ç«´éä½ºå¢éå²îå¨´å¬¬é´ç¼ç»î³+é¢å® îç»®æîéå²æª®ç¯ï¸½æ«¤é³è¥å£éå¹¿â¬åâ¬åæéè·ºççº­â¬éã©æ£¬éå²î³ç»å¬©ç¶ç»¯ç»æ¸¶ç¹å±¾æ£é?/div><div class="tags"><span class="tag">ç»¯è¤ç²ºç?/span><span class="tag">éè·ºççº­â¬</span><span class="tag">éã§î</span></div></div>
+    <div class="course-card"><div class="up">éæ¨»æçå³in</div><div class="desc">ç§å¬æ¡éåç½+éä¼´åºéå´é´æ¾¶âå§³éè·¨éªçæç¬éå²â¬çºç»é¶â¬å®¸Ñå«­å§ã¥ãæ¶å¬¨â¬åâ¬åæéå¤ççº­â¬éåº¢å½é«ç¸å½éå­ç´çè¶Ðæ¤åº¢ç¸æ¤åº¤å®éªä»ç²¯é?/div><div class="tags"><span class="tag">ç§å¬æ¡éåç½</span><span class="tag">éä¼´åºéå´é´</span><span class="tag">é«çºç»</span></div></div>
+    <div class="course-card"><div class="up">éºè¾©æéä½·ç¬</div><div class="desc">éãæéºã§æ+ç§å¬æ¡éåç½éå¬¬å¢çæç¬éåå«­éæ¶å½éîå¸¹éåç¶ç»¯ä¼ç´é«æç·«å¨å®æ«éåç¥«éæ¬åéæ®æ®"415æµ è¥æå¨?é?é©æ­æé¬æ¿å"éªå¤¸è´å¨´ä½·ç´¶é?/div><div class="tags"><span class="tag">éãæéºã§æ</span><span class="tag">ç§å¬æ¡éåç½</span><span class="tag">æ©æ¶¢æ¨</span></div></div>
+    <div class="course-card"><div class="up">ç»æ¬æ±é¢å® î</div><div class="desc">é¢å® îæ£°åçéâ¬éå³°å¥éå¶å§UPæ¶è®³ç®£æ¶â¬éå±½ãæµ£æ»æå¦åç¦éè§ç¡¶ççç¬å¯®ç´ç´é»æªç·µéµè§æ¼éå¶å§éåâ¬åæé¢å® îé¯å²å¿75+é¨å®â¬åªæé?/div><div class="tags"><span class="tag">é¢å® î</span><span class="tag">æ¾¶Ñç¶é?/span><span class="tag">éµè§æ¼</span></div></div>
+    <div class="course-card"><div class="up">éåº¢âµæ¿å·ç´éåº¡æµéæ¬åé?/div><div class="desc">ç¯æ­çéãææ¶æ»ãéå±½å½çâ¬çæ¿ç¹å¨æ¢æ½ªç¯æç®éå â¬åæ¤éè·¨å¹éè§æ´¿éæ¿å¼·éè®¹ç´é«åæç¯æ­çéå«æ¥é¨å«æçï¹æ©é«ç¸å½éåâ¬?/div><div class="tags"><span class="tag">ç¯æ­ç</span><span class="tag">éèµæ</span><span class="tag">éï½ç</span></div></div>
+    <div class="course-card"><div class="up">é½âç¬æµåç</div><div class="desc">çå±¾ç¥´éã§îçè¶Ðéå²â¬æç·«æ¶ã¥çéå²â¬åæéå¤ççº­â¬é¨å®â¬åªæç»¯è¤ç²ºå§å´æéåæé²å¿å§ç»¯è¯²æ°é«æç·«éãæçãå¾éååµé?/div><div class="tags"><span class="tag">çå±¾ç¥´éã§î</span><span class="tag">æ©æ¶¢æ¨</span></div></div>
+    <div class="course-card"><div class="up">çå¿âéã¥åé°?/div><div class="desc">é¢å® î+éã£ç¯éå±¾æ¡çæç¬éå²îçï½å¸´é¦ççµéä½¸çé¿å¶â¬Ñå·±éåãæµ£æ»æç»±ç³æ½ç»îç®éç²ç¶æ¶æ¿çéå²â¬åæé¦ã¨äº´é°åªæçº°åº£å¢éæ §îæ¶ç®â¬?/div><div class="tags"><span class="tag">é¢å® î</span><span class="tag">éã£ç¯</span><span class="tag">ç»±ç³æ½</span></div></div>
+    <div class="course-card"><div class="up">éîâ¬å§ç«·æ¶?/div><div class="desc">æµ ã§ç­çåî¶è¤°ã ç´¡é·åÐéªç¼î½éå±¾ç¡æ¶îîæ£°?-8éåæéå²â¬åæé«æ°¬å«éå æ£¿çï¸¿ç¯éåâçîæ°éãææ¶æ»ãéâ¬æ¶åå­è¤°â¿â¬?/div><div class="tags"><span class="tag">çº°åº£å¢é?/span><span class="tag">ç·â¬ç?/span><span class="tag">éãæ</span></div></div>
+    <div class="course-card"><div class="up">éã£ç¯çï¹æ±</div><div class="desc">ç¼æ´ç¯éæ ­æ½°çæç¬æ¤¤ç¸ç´å¦¯âå«ç»æî½+é«æ°î½éç¡çéå²ç¹éçºæ¹¡ç¹ç¶â¬å¨æºå§æ¶æ´¿éåâ¬åæç»æç¯é«æ°³ç¹éåº£çéå©æ½°çæâ¬?/div><div class="tags"><span class="tag">éã£ç¯</span><span class="tag">ç¼æ´ç¯é?/span></div></div>
+    <div class="course-card"><div class="up">éîâ¬å®ç¶æ¥¹?/div><div class="desc">éä¼´åºéå´é´+ç§å¬æ¡éåç½éå±¼ç¬æ¤¤ç¸ç´çè¶Ðç¼åå§éå²â¬åæé©è¹îæå¨æ¥é¨å«æçï¸ºâ¬åæ¹æ¾¶Ñåºéå¶åéç½î½çåî¶é?/div><div class="tags"><span class="tag">éä¼´åº</span><span class="tag">ç§å¬æ¡</span><span class="tag">éç½î½</span></div></div>
+    <div class="course-card"><div class="up">é¬æ¿ç¾é?/div><div class="desc">éãæéºã§ææ¶æ»ãéå±½æµè¤°ã¡å¸¹éåîçï½å«­éå¸®ç´ç»æ´ªæ£¿é²å¶ç¯é¶â¬å®¸Ñçéæã½é¢ã£â¬åâ¬åæé¥ç¬å¸¹éå«æ¥é¨å®â¬åªæé?/div><div class="tags"><span class="tag">éãæéºã§æ</span><span class="tag">é¥ç¬å¸¹</span></div></div>
+    <div class="course-card"><div class="up">æ¾¶Ñçéîâ¬?/div><div class="desc">é¢å® îç»±ç³æ½ç»îç®é¨å©¾Pæ¶ä¼ç´å§£å¿æ£©éå­æéèµæéî å£+é¢å® îçå®å¯çã¨æªéå²â¬åæéã¨î°éå²ç¤éæ¬åæ¾¶å¥â¬?/div><div class="tags"><span class="tag">é¢å® îç»±ç³æ½</span><span class="tag">éèµæ</span></div></div>
+    <div class="course-card"><div class="up">éîâ¬å­â¬ä½½æ·³</div><div class="desc">çå±¾ç¥´éªç¼î½ç»®æîéå±¼äºéåå¾é¥åâ¬å¨æ°éªä½½â¬åªæ¹¡æ£°æ¨¹è´éæ¿æ¹°é«æ°î½é·åÐéåâ¬åæéç½î½éèµîæµ£è·¨æ¤é?/div><div class="tags"><span class="tag">éªç¼î½</span><span class="tag">çå±¾ç¥´</span></div></div>
+    <div class="course-card"><div class="up">å§ï¹âé°ä½¸ç¬éå ç¶çåç¬æ¤¤ç¸ç´</div><div class="desc">ç¯æ­çéï½çé«ç»îç»¯è¯²åªéå±¾å¦¸éîåé¨å«ç¶çåç´ªé´æ°ãéï½ç°»éå²îè¹åæ¥éå¨ç¬æ¥æ¨¸â¬åç¡¶å¯°å¬ªç¶çåç¬æ£°æ¨ºæ¨æ¶çå¸¹é½æ©â¬?/div><div class="tags"><span class="tag">ç¯æ­ç</span><span class="tag">å¨æç·¥</span><span class="tag">é«ç»î</span></div></div>
   </div>
 
   <div class="card guide-section">
-    <h3>🎤 面试准备建议</h3>
-    <p><strong>广东面试形式：</strong>结构化面试为主，4题20分钟（含思考时间），侧重综合分析、组织管理、应急应变、人际沟通四大题型。</p>
-    <p><strong>南沙特色考题：</strong>常结合自贸区建设、粤港澳合作、营商环境优化等区情热点命题。</p>
-    <p><strong>备考方法：</strong>①每天开口练习2-3题并录音复盘；②积累20个南沙发展示例和10个广东政策素材；③找考友组队对练或报线下模拟班；④注意仪表仪态、声音洪亮、条理清晰（第一/第二/第三）。</p>
-    <p><strong>推荐资源：</strong>B站「面试学长」「小马哥公考」，喜马拉雅「公务员面试100题」。</p>
-    <p><strong>笔面衔接：</strong>笔试备考阶段即可每天朗读15分钟（人民日报评论+南沙发改委公众号文章），培养语感和政策储备。</p>
+    <h3>é¦å¸³ éã£ç¯éåî¬å¯¤é¸¿î</h3>
+    <p><strong>éªå¤¸ç¬¢éã£ç¯è¤°ã ç´¡é?/strong>ç¼æ´ç¯éæ ­æ½°çæè´æ¶ä¼ç´4æ£°?0éåæéå æé¬æ¿â¬å©æ¤éè¾¾ç´éå±¼æ¶é²å¶æ£éå åéæ©â¬ä½ºç²ç¼å©î¸éåâ¬ä½¸ç°²é¬ã¥ç°²éæ¨¸â¬ä½·æ±éå®ç¡é«æ°¬æ´æ¾¶Ñî½é¨å¬¨â¬?/p>
+    <p><strong>éæ¥çéç¡å£é°å®î½é?/strong>ç¯å¥ç²¨éå £åçç¨¿å°¯å¯¤é¸¿îéä½ºè å¨îå¢éå ç¶éä½½æéåå¹æ¾§å§ç´­éæ «çéçåéî å£éä»î½é?/p>
+    <p><strong>æ¾¶åªâ¬å©æå¨æªç´°</strong>é¶ç³ç¡æ¾¶âç´éï½ç²æ¶?-3æ£°æ¨ºèè¤°æ¢ç¶æ¾¶å¶æ´éæ¶æ½ç»îç®20æ¶îå´¡å¨æ¬å½çæ ãæ¸å¬ªæ°10æ¶îç®æ¶æ»æç»æ «ç¤éæ¶ç´±é¶ã¡å£é°å¨å¼¸ç¼å¯æ§¦çµå­ç²é´æ ¨å§¤ç»¾å¤¸ç¬å¦¯âå«éî¨ç´±é¶ï½æé°å¿åçã¤åé¬ä½µâ¬ä½¸ï¼éè«æ¤½æµîºâ¬ä½¹æ½¯éåç«»éå¸®ç´ç»î¿ç«´/ç»î¿ç°©/ç»î¿ç¬éå¤â¬?/p>
+    <p><strong>éºã¨å´ç§å¬ç°®é?/strong>Bç»æ¬â¬å²æ½°çæîéè£¤â¬å¶â¬å±½ç¬æ¤¹îæéîâ¬å¦â¬å¶ç´é æ»âé·å¤æ³¤éå±½åéâ³æ³éã£ç¯100æ£°æ¨¸â¬å¶â¬?/p>
+    <p><strong>ç»ææ½°çæå¸´é?/strong>ç»æç¯æ¾¶åªâ¬å®æ¨å¨éåµéîç¡æ¾¶âæ¹ç?5éåæéå æ±å§ææ£©é¶ã¨çç?éæ¥çéææ¼æ¿®æ¿åæµ¼æ¥å½¿éå©ç·éå¤ç´é©ç°åçîåéå±¾æç»æ §åæ¾¶å¥â¬?/p>
   </div>
 </div>
 
-<!-- Tab 3: 我的统计 -->
+<!-- Tab 3: çè®³åçâ³å -->
+<div class="tab-content" id="tab-reading">
+  <div class="card">
+    <div class="card-title"><span class="icon">é¦æ</span> éå°î°æ©æ¶å®³å§åî</div>
+    <div class="reading-stats-row">
+      <div class="reading-stat-card">
+        <div class="reading-stat-value" id="booksRead">0</div>
+        <div class="reading-stat-label">å®¸è¶î°ç¹?/ 15é?/div>
+      </div>
+      <div class="reading-stat-card">
+        <div class="reading-stat-value" id="booksProgress">0%</div>
+        <div class="reading-stat-label">ç¹å±¾åæ©æ¶å®³</div>
+      </div>
+      <div class="reading-stat-card">
+        <div class="reading-stat-value" id="readingTotalTime">0éåæ</div>
+        <div class="reading-stat-label">ç»±îî¸éå°î°</div>
+      </div>
+      <div class="reading-stat-card">
+        <div class="reading-stat-value" id="booksReading">0</div>
+        <div class="reading-stat-label">å§ï½æ¹ªéå°î°</div>
+      </div>
+    </div>
+    <div class="week-progress-bar"><div class="week-progress-fill" id="readingBar" style="width:0%;background:linear-gradient(90deg,#8e44ad,#ab47bc);"></div></div>
+  </div>
+  <div id="bookListContainer"></div>
+</div>
+
+<!-- Tab 4: é´æ æ®ç¼ç»î¸ -->
 <div class="tab-content" id="tab-stats">
   <div class="stat-grid">
-    <div class="stat-card"><div class="stat-value" id="weekRate">0%</div><div class="stat-label">本周完成率</div></div>
-    <div class="stat-card"><div class="stat-value" id="totalDays">0</div><div class="stat-label">总打卡天数</div></div>
-    <div class="stat-card"><div class="stat-value" id="streakDays">0</div><div class="stat-label">连续打卡</div></div>
+    <div class="stat-card"><div class="stat-value" id="weekRate">0%</div><div class="stat-label">éîæç¹å±¾åé?/div></div>
+    <div class="stat-card"><div class="stat-value" id="totalDays">0</div><div class="stat-label">é¬ç»å¢¦éâ³ãé?/div></div>
+    <div class="stat-card"><div class="stat-value" id="streakDays">0</div><div class="stat-label">æ©çµç»éµæ³å´±</div></div>
   </div>
 
   <div class="card">
-    <div class="card-title"><span class="icon">📊</span> 本周进度</div>
+    <div class="card-title"><span class="icon">é¦æ³</span> éîææ©æ¶å®³</div>
     <div class="week-progress-bar"><div class="week-progress-fill" id="weekBar" style="width:0%"></div></div>
-    <div style="text-align:center;font-size:12px;color:var(--text-secondary);margin-top:3px;" id="weekText">0 / 0 任务完成</div>
+    <div style="text-align:center;font-size:12px;color:var(--text-secondary);margin-top:3px;" id="weekText">0 / 0 æµ è¯²å§ç¹å±¾å</div>
   </div>
 
   <div class="card">
-    <div class="card-title"><span class="icon">⏱️</span> 各模块学习时长（实际计时）</div>
+    <div class="card-title"><span class="icon">é´æç¬</span> éå¬Äé§æ¥îæ¶ç³æ¤éå¡ç´ç¹çºæª¯çâæ¤é?/div>
     <div id="moduleBars"></div>
   </div>
 
   <div class="card">
-    <div class="card-title"><span class="icon">📅</span> 近7天打卡日历</div>
+    <div class="card-title"><span class="icon">é¦æ®</span> æ©?æ¾¶âå¢¦éâæ£©é?/div>
     <div id="calendarGrid" style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:6px;"></div>
   </div>
 </div>
 
-<!-- 底部导航 -->
+<!-- æ´æ¢å´çµè°å -->
 <div class="bottom-nav">
   <div class="nav-item active" data-tab="tab-checkin" onclick="switchTab('tab-checkin')">
-    <span class="nav-icon">📋</span> 今日打卡
+    <span class="nav-icon">é¦æµ</span> æµ å©æ£©éµæ³å´±
   </div>
   <div class="nav-item" data-tab="tab-guide" onclick="switchTab('tab-guide')">
-    <span class="nav-icon">📖</span> 备考攻略
+    <span class="nav-icon">é¦æ</span> æ¾¶åªâ¬å©æ¾é£?  </div>
+  <div class="nav-item" data-tab="tab-reading" onclick="switchTab('tab-reading')">
+    <span class="nav-icon">é¦æ</span> çè®³åçâ³å
   </div>
   <div class="nav-item" data-tab="tab-stats" onclick="switchTab('tab-stats')">
-    <span class="nav-icon">📊</span> 我的统计
+    <span class="nav-icon">é¦æ³</span> é´æ æ®ç¼ç»î¸
   </div>
 </div>
 
 <script>
-// ============ 工具函数 ============
+// ============ å®¸ã¥å¿éè¥æ ============
 function todayKey() {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
@@ -383,7 +471,7 @@ function todayKey() {
 function getDayOfWeek(d) { const day = d.getDay(); return day === 0 ? 7 : day; }
 function isWeekend(d) { const dw = getDayOfWeek(d); return dw === 6 || dw === 7; }
 
-const weekdayModules = ['言语理解','判断推理','数量关系','资料分析','申论小题'];
+const weekdayModules = ['ç·â¬çî æç?,'éãæéºã§æ','éä¼´åºéå´é´','ç§å¬æ¡éåç½','é¢å® îçå¿î½'];
 function getModuleForDate(d) {
   const dw = getDayOfWeek(d);
   if (dw >= 6) return null;
@@ -396,52 +484,47 @@ function buildTasks(dateObj) {
   const tasks = [];
   if (weekend) {
     tasks.push(
-      { id:'morning_read', section:'晨间', name:'晨读时政30分钟', desc:'学习强国+人民日报+南沙发改委公众号', time:'30min', icon:'🌅' },
-      { id:'am_practice', section:'上午', name:'行测专项练习', desc:'计时刷题1套（110题/100分钟）+ 逐题复盘', time:'180min', icon:'📝' },
-      { id:'pm_shenlun', section:'下午', name:'申论训练', desc:'1道小题+大作文框架练习或1篇完整作文', time:'120min', icon:'✍️' },
-      { id:'night_review', section:'晚间', name:'本周错题回顾+薄弱模块补强', desc:'整理本周错题本，针对性回看B站课程', time:'60min', icon:'🔍' },
-      { id:'mock_exam', section:'晚间', name:'模考（每两周一次）', desc:'完整行测+申论模考，严格计时，模拟真实考场', time:'240min', icon:'📄', optional:true }
+      { id:'morning_read', section:'éã©æ£¿', name:'éã¨î°éèµæ30éåæ', desc:'çï¸¿ç¯å¯®åæµ+æµçç¯éã¦å§¤+éæ¥çéææ¼æ¿®æ¿åæµ¼æ¥å½¿', time:'30min', icon:'é¦å¯' },
+      { id:'am_practice', section:'æ¶å©å´', name:'çå±¾ç¥´æ¶æ»ãç¼å§ç¯', desc:'çâæ¤éç½î½1æ¿æ¥ç´110æ£°?100éåæé? é«æ°î½æ¾¶å¶æ´', time:'180min', icon:'é¦æ' },
+      { id:'pm_shenlun', section:'æ¶å¬ªå´', name:'é¢å® îçî ç²', desc:'1é¬æ³ç¬æ£°?æ¾¶Ñç¶éå¨îéåç²æ¶ç³å¨1ç»¡å§ç¬éç¿ ç¶é?, time:'120min', icon:'éå¶ç¬' },
+      { id:'night_review', section:'éæ°¶æ£¿', name:'éîæé¿æ¬î½é¥çºã+éå«æ¥å¦¯â³æ½¡çã¥å·±', desc:'éå¯¸æéîæé¿æ¬î½éîç´é½å î®é¬Ñæ´éªå©¤ç»æ¬î³ç»?, time:'60min', icon:'é¦æ³' },
+      { id:'mock_exam', section:'éæ°¶æ£¿', name:'å¦¯Â¤â¬å¿ç´å§£å¿è¢±éã¤ç«´å¨âç´', desc:'ç¹å±¾æ£çå±¾ç¥´+é¢å® îå¦¯Â¤â¬å¿ç´æ¶ã¦ç¸çâæ¤éå±¾Äé·çºæ¹¡ç¹ç¶â¬å¨æº', time:'240min', icon:'é¦æ«', optional:true }
     );
   } else {
-    const mod = module || '综合';
+    const mod = module || 'ç¼çæ';
     tasks.push(
-      { id:'morning_read', section:'晨间', name:'晨读时政20分钟', desc:'学习强国刷10题+阅读1篇时评文章', time:'20min', icon:'🌅' },
-      { id:'commute_quiz', section:'通勤', name:'通勤刷题', desc:'粉笔APP刷15-20题（言语/判断/常识）', time:'25min', icon:'🚇' },
-      { id:'night_deep', section:'晚间', name:'深度复习：'+mod, desc:'B站课程学习+专项练习20题+逐题复盘', time:'90min', icon:'📖' },
-      { id:'error_review', section:'晚间', name:'错题总结15分钟', desc:'当日错题录入错题本，标注错因和知识点', time:'15min', icon:'📋' }
+      { id:'morning_read', section:'éã©æ£¿', name:'éã¨î°éèµæ20éåæ', desc:'çï¸¿ç¯å¯®åæµé?0æ£°?éå°î°1ç»¡å¨æ¤çå¬æç»?, time:'20min', icon:'é¦å¯' },
+      { id:'commute_quiz', section:'é«æ°¬å«', name:'é«æ°¬å«éç½î½', desc:'ç»®å¤çªAPPé?5-20æ£°æ©ç´ç·â¬ç?éãæ/ç¯æ­çé?, time:'25min', icon:'é¦æ®' },
+      { id:'night_deep', section:'éæ°¶æ£¿', name:'å¨£åå®³æ¾¶å¶ç¯é?+mod, desc:'Bç»æ¬î³ç»å¬ªîæ¶?æ¶æ»ãç¼å§ç¯20æ£°?é«æ°î½æ¾¶å¶æ´', time:'90min', icon:'é¦æ' },
+      { id:'error_review', section:'éæ°¶æ£¿', name:'é¿æ¬î½é¬è¤ç²¨15éåæ', desc:'è¤°æ´æ£©é¿æ¬î½è¤°æåé¿æ¬î½éîç´éå¨æé¿æ¬æ´éå²ç¡çåå£', time:'15min', icon:'é¦æµ' }
     );
   }
   return tasks;
 }
 
-// ============ 数据持久化 ============
+// ============ éçåµé¸ä½·ç®é?============
 const STORAGE_KEY = 'nansha_gwy_checkin_v2';
+const READING_KEY = 'nansha_gwy_reading';
 
 function loadData() {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : {};
-  } catch(e) { return {}; }
+  try { const raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : {}; }
+  catch(e) { return {}; }
 }
-
 function saveData(data) { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); }
 
-// 获取某任务记录，返回 {ts,dur} 或 null
 function getTaskRecord(dateKey, taskId) {
   const data = loadData();
   const val = data[dateKey] && data[dateKey][taskId];
   if (!val) return null;
-  if (typeof val === 'number') return { ts: val, dur: 25 * 60 }; // 兼容旧格式：纯时间戳→默认25分钟
-  return val; // 新格式：{ts,dur}
+  if (typeof val === 'number') return { ts: val, dur: 25 * 60 };
+  return val;
 }
-
 function setTaskRecord(dateKey, taskId, ts, dur) {
   const data = loadData();
   if (!data[dateKey]) data[dateKey] = {};
   data[dateKey][taskId] = { ts: ts, dur: dur };
   saveData(data);
 }
-
 function removeTaskRecord(dateKey, taskId) {
   const data = loadData();
   if (data[dateKey]) {
@@ -450,96 +533,123 @@ function removeTaskRecord(dateKey, taskId) {
     saveData(data);
   }
 }
-
 function isChecked(dateKey, taskId) { return !!getTaskRecord(dateKey, taskId); }
 function getDuration(dateKey, taskId) {
   const r = getTaskRecord(dateKey, taskId);
   return r ? r.dur : 0;
 }
 
-// ============ 计时状态管理 ============
-let timerState = null; // {dateKey, taskId, startTime, intervalId}
+// ============ çè®³åéçåµ ============
+function loadReadingData() {
+  try { const raw = localStorage.getItem(READING_KEY); return raw ? JSON.parse(raw) : {}; }
+  catch(e) { return {}; }
+}
+function saveReadingData(data) { localStorage.setItem(READING_KEY, JSON.stringify(data)); }
 
-function startTimer(dateKey, taskId) {
-  // 如果已有其他任务在计时，先自动结束
-  if (timerState) {
-    endTimerCurrent(true);
-  }
-  const now = Date.now();
-  timerState = { dateKey, taskId, startTime: now, intervalId: null };
-
-  // 更新浮条
-  updateTimerBar();
-  document.getElementById('timerBar').classList.add('active');
-
-  // 每秒刷新
-  timerState.intervalId = setInterval(() => {
-    updateTimerBar();
-    renderCheckinTab(); // 刷新打卡页面的计时按钮状态
-  }, 1000);
-
-  renderCheckinTab();
+function getBookRecord(bookId) {
+  const data = loadReadingData();
+  return data[bookId] || null; // { started, finished, durationSec }
+}
+function setBookRecord(bookId, rec) {
+  const data = loadReadingData();
+  data[bookId] = rec;
+  saveReadingData(data);
 }
 
-function endTimerCurrent(autoSwitch) {
+// æ¶ï¹å´éçåµ
+const BOOK_LIST = [
+  // ç»î¿ç«´çå¦ç´°çã æ¢éîæ
+  { id:'b1', title:'çµå²åéå¥âéå¥å', author:'ç¼æ¤¾ééå­¤éç«»å®?, desc:'æ£°çºî«"éµæ³ä¼ç§æ°¶æ¶"çååº·éå±½ç¼ç»å¬­ç¥«æµÑç¬çç·â¬è¹æ®çãç¡å¦åç¦', layer:'ç»î¿ç«´çå¦ç´°çã æ¢éîæ', layerClass:'l1' },
+  { id:'b2', title:'çå¿å«é½éæ¶', author:'éæ°¬î¿è·¯é¸å¶åç?, desc:'é¢ã§î¢çæ¿îé«å¿åéå©â¬ä½¸î²éâæ°çî¢å§©éè·ºåéç¨¿ç¸¾é«æç·«', layer:'ç»î¿ç«´çå¦ç´°çã æ¢éîæ', layerClass:'l1' },
+  { id:'b3', title:'çã å§é·îæ±æ¶å¬­ç¾', author:'éæ°¬î¿è·¯é¸å¶åç?, desc:'7éªæå´ç¹çµå¹çã å§é·îæ±é¨å«çé¿å¶îæ¥ ãç´"æ·æ¿æ®°é«æç¨éã¢åé·îæ±"æ¶å¤æ¨å¨å«Äé¨?, layer:'ç»î¿ç«´çå¦ç´°çã æ¢éîæ', layerClass:'l1' },
+  // ç»î¿ç°©çå¦ç´°é¶æ¡ç¥«é©è¹îéåî
+  { id:'b4', title:'é±îæ§é¨å¬å§ç§å®â¬?, author:'éîæ¾éå¹éç¸éå³°å·¹æ¿®?, desc:'æµ å³°â¬å¼å§ç§?é¦ï½ç²¡"éå±½å·±çå¨ç¨éã¨ç«éå«â¬ä½¸ç«¶é¦ååé¢ç´â¬ä¾æ±éç»îç?, layer:'ç»î¿ç°©çå¦ç´°é¶æ¡ç¥«é©è¹îéåî', layerClass:'l2' },
+  { id:'b5', title:'éåæé©æ´ªå¾ç¯æ­ç', author:'ç»¾ï¸¾å ªè·¯éæ°­ç¸', desc:'é¸å¨æé¶æ¡ç¥«æ´æç°é«æç·«éå²æ¤éçåµçä½¹æ§æµ£åº¢åéîå¯éæ¿çé²æ¦æ±éç¶ç´­é?, layer:'ç»î¿ç°©çå¦ç´°é¶æ¡ç¥«é©è¹îéåî', layerClass:'l2' },
+  { id:'b6', title:'é¶æ¡ç¥«æ¶îæ¸¶ç» â¬éæ æ®æµ?, author:'é­åæµæ¥£?, desc:'éîæ¹¡éæ ¦ç¯éå¼å§ç§å¶ç´é»æ®å§"æµ¼æ¿â¬ç¬ºâ¬ä½¸æ§çã£â¬ä½¹æ¤é?æ¶å¤î¦ç»±?, layer:'ç»î¿ç°©çå¦ç´°é¶æ¡ç¥«é©è¹îéåî', layerClass:'l2' },
+  // ç»î¿ç¬çå¦ç´°ç¹ç´å¬é¿å¶ç¶
+  { id:'b7', title:'é¸å¨æé©æ´ªå¾é¶æ¡ç¥«é¸å§å´¡', author:'é¾æ°îé»è½°ç¬£é½?, desc:'Aé²âå¯éæ¿çé²æç¾é¶æåå¨´ä½ºâ¼éå±½ææµ¼æ¿â¬å¼æå¨æâ¬ä½¸ç¾é¶æ ç¥é£ã£â¬ä½¹îé©å å¦§å®¸?, layer:'ç»î¿ç¬çå¦ç´°ç¹ç´å¬é¿å¶ç¶', layerClass:'l3' },
+  { id:'b8', title:'éµå¬«å¦¸éµå¬«ææµ£çºî°çã¡å§¤', author:'éæ­æ¹', desc:'æµ ã¨å¯éæå¨é¶ã¦îæ¸å¬«åª¶çï½ç¬å¯®çºãéå²ä¼©å¯®â¬çã å§é«ç²äº£éç½æ§º', layer:'ç»î¿ç¬çå¦ç´°ç¹ç´å¬é¿å¶ç¶', layerClass:'l3' },
+  { id:'b9', title:'ç¹æ°­å§éä½¸å¾çã å§é·îæ±', author:'é¾æ°îé»è½°ç¬£é½?, desc:'"å®¸ã¨ç¥«+ç¹æ°­å§"ç»îç®ç»î¿ç«´å¦å å¾é¨å«ç¬éç£ç¾å¯°?, layer:'ç»î¿ç¬çå¦ç´°ç¹ç´å¬é¿å¶ç¶', layerClass:'l3' },
+  // ç»îæ´çå¦ç´°çãç¡éçç¬
+  { id:'b10', title:'ç»éç¡éåçé?, author:'éã§æè·¯éºæç¸', desc:'æ¾¶æ°¬åé¬æ¿æ·®å¦¯â³ç·éä¾â¬åæé¬æ¿â¬å¦â¬ä½½åéæ¶æ¹éç·å¯', layer:'ç»îæ´çå¦ç´°çãç¡éçç¬', layerClass:'l4' },
+  { id:'b11', title:'éç·å¯', author:'éçºç¯æªéâî', desc:'æµ åº¡ç¯çåæéç»îæ´ï¹åéæ¬â¬åå§éä½½æ£ç¯ä½¸æ°é¦æ®ç´­éæä¸çµè§å§ç§å­æ®éææ¹¡è¤°åæ·', layer:'ç»îæ´çå¦ç´°çãç¡éçç¬', layerClass:'l4' },
+  { id:'b12', title:'å©î£îéåº¡çµç?, author:'æµ¼îãè·¯æ¤¹îçµé©åçµ', desc:'éå¤æ¥ç¯åæºéåî vs çå±¼è´é²æ£çºçï¸¼ç´é¸å¨æé©æ´ªå¾ç¹æ°­å§é¨å«îéîççº­â¬', layer:'ç»îæ´çå¦ç´°çãç¡éçç¬', layerClass:'l4' },
+  // ç»î¿ç°²çå¦ç´°æ©æ¶¢æ¨æµ£æ¶é´
+  { id:'b13', title:'é¶æ¡ç¥«éâ¬é²å¶î¦é¨åªç°¨', author:'éå¶å´å¯°ä»¿ç½âéå¬«æ', desc:'é«åæé¬æ¿æ·®éä¾îéâçéî â¬ä½ºîæµå±½ç°é¬æ¿â¬å¿ç´é©æå®é¶æ¡ç¥«éîå·', layer:'ç»î¿ç°²çå¦ç´°æ¤åº¨æ«ç» ï¼ææ¶åº¤îæ¶åç¸¾é?, layerClass:'l5' },
+  { id:'b14', title:'éçµæé¬Ñç®é½?, author:'ç¼æ¤¾ééå­¤å³°èé?, desc:'éåç½å¨âæç¼å¿ç¥¹é¨å«ç¸¾éåîéè§ç°®éå²îé¯æç«¶é¦è¹åª¯éîæ¹¡é¨å¯îé?, layer:'ç»î¿ç°²çå¦ç´°æ¤åº¨æ«ç» ï¼ææ¶åº¤îæ¶åç¸¾é?, layerClass:'l5' },
+  { id:'b15', title:'é²å¶î²éæ°¬î®é¨åªç°¨', author:'éåå§æ¿¡îç¯å£é¾å¤ç¬', desc:'10å§ã¦å¢¦é«ç²ç¬éç¿ éæµé¸¿å¨éï¼é´ç¼çç´å¯¤è¹çéî å¹ç» ï¼æå¦åç¦', layer:'ç»î¿ç°²çå¦ç´°æ¤åº¨æ«ç» ï¼ææ¶åº¤îæ¶åç¸¾é?, layerClass:'l5' }
+];
+
+// ============ çâæ¤éèµâ¬ä½ºî¸éå­ç´æµ è¯²å§ + çè®³åéè¾©æ¤é?============
+let timerState = null; // {type:'task'|'book', dateKey?, taskId?, bookId?, startTime, intervalId}
+
+function startTaskTimer(dateKey, taskId) {
+  if (timerState) endCurrentTimer(true);
+  timerState = { type:'task', dateKey, taskId, startTime: Date.now(), intervalId: null };
+  startTimerUI();
+}
+
+function startBookTimer(bookId) {
+  if (timerState) endCurrentTimer(true);
+  timerState = { type:'book', bookId, startTime: Date.now(), intervalId: null };
+  // æ¿¡åçæ©æ¨»çå¯®â¬æ¿®å¬®æ§çä¼ç´éåªîå¯®â¬æ¿®?  const rec = getBookRecord(bookId);
+  if (!rec) setBookRecord(bookId, { started: Date.now(), finished: null, durationSec: 0 });
+  startTimerUI();
+}
+
+function startTimerUI() {
+  document.getElementById('timerBar').classList.add('active');
+  timerState.intervalId = setInterval(() => {
+    updateTimerBar();
+    if (timerState.type === 'task') renderCheckinTab();
+    else renderReadingTab();
+  }, 1000);
+  if (timerState.type === 'task') renderCheckinTab();
+  else renderReadingTab();
+}
+
+function endCurrentTimer(autoSwitch) {
   if (!timerState) return;
   const now = Date.now();
   const durSec = Math.round((now - timerState.startTime) / 1000);
   clearInterval(timerState.intervalId);
 
   if (durSec >= 1) {
-    // 保存时长，同时完成打卡
-    setTaskRecord(timerState.dateKey, timerState.taskId, now, durSec);
+    if (timerState.type === 'task') {
+      setTaskRecord(timerState.dateKey, timerState.taskId, now, durSec);
+    } else if (timerState.type === 'book') {
+      const rec = getBookRecord(timerState.bookId) || { started: now, finished: null, durationSec: 0 };
+      rec.durationSec = (rec.durationSec || 0) + durSec;
+      if (!rec.started) rec.started = now;
+      setBookRecord(timerState.bookId, rec);
+    }
     showToast(autoSwitch
-      ? `⏱️ 自动结束计时 · 已记录 ${formatDuration(durSec)}`
-      : `⏱️ 计时结束 · 已记录 ${formatDuration(durSec)}`);
+      ? `é´æç¬ é·îå§©ç¼æ´æ½«çâæ¤ è·¯ å®¸è¶îè¤°?${formatDuration(durSec)}`
+      : `é´æç¬ çâæ¤ç¼æ´æ½« è·¯ å®¸è¶îè¤°?${formatDuration(durSec)}`);
   }
 
   timerState = null;
   document.getElementById('timerBar').classList.remove('active');
   renderCheckinTab();
+  renderReadingTab();
   updateStats();
 }
 
-function stopTimer() { endTimerCurrent(false); }
+function stopTimer() { endCurrentTimer(false); }
 
 function updateTimerBar() {
   if (!timerState) return;
   const elapsed = Math.round((Date.now() - timerState.startTime) / 1000);
   document.getElementById('timerDisplay').textContent = formatDuration(elapsed);
 
-  const tasks = buildTasks(new Date(timerState.dateKey));
-  const task = tasks.find(t => t.id === timerState.taskId);
-  document.getElementById('timerTaskName').textContent = task ? task.name : '任务';
-}
-
-// ============ 打卡逻辑 ============
-function handleCheck(dateKey, taskId) {
-  if (timerState && timerState.dateKey === dateKey && timerState.taskId === taskId) {
-    // 正在计时中，结束计时
-    endTimerCurrent(false);
-    return;
-  }
-  if (isChecked(dateKey, taskId)) {
-    // 取消打卡
-    removeTaskRecord(dateKey, taskId);
-    showToast('已取消打卡');
+  if (timerState.type === 'task') {
+    const tasks = buildTasks(new Date(timerState.dateKey));
+    const task = tasks.find(t => t.id === timerState.taskId);
+    document.getElementById('timerTaskName').textContent = task ? task.name : 'æµ è¯²å§';
   } else {
-    // 直接打卡（无计时），默认25分钟
-    setTaskRecord(dateKey, taskId, Date.now(), 25 * 60);
-    showToast('✅ 打卡成功！');
+    const book = BOOK_LIST.find(b => b.id === timerState.bookId);
+    document.getElementById('timerTaskName').textContent = book ? 'é¦æ '+book.title : 'éå°î°';
   }
-  renderCheckinTab();
-  updateStats();
-}
-
-function handleStartTimer(dateKey, taskId) {
-  if (timerState && timerState.dateKey === dateKey && timerState.taskId === taskId) {
-    // 正在计时中，点的是同一个任务 → 结束计时
-    endTimerCurrent(false);
-    return;
-  }
-  startTimer(dateKey, taskId);
 }
 
 function formatDuration(totalSec) {
@@ -547,60 +657,99 @@ function formatDuration(totalSec) {
   const s = totalSec % 60;
   return `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
 }
-
 function formatDurationLong(totalSec) {
   const m = Math.floor(totalSec / 60);
-  if (m >= 60) {
-    const h = Math.floor(m / 60);
-    const rm = m % 60;
-    return `${h}小时${rm}分钟`;
-  }
-  return `${m}分钟`;
+  if (m >= 60) { const h = Math.floor(m/60); const rm = m%60; return `${h}çå¿æ¤${rm}éåæ`; }
+  return `${m}éåæ`;
 }
 
-// ============ 渲染 ============
+// ============ éµæ³å´±é«æç·« ============
+function handleCheck(dateKey, taskId) {
+  if (timerState && timerState.type === 'task' && timerState.dateKey === dateKey && timerState.taskId === taskId) {
+    endCurrentTimer(false); return;
+  }
+  if (isChecked(dateKey, taskId)) {
+    removeTaskRecord(dateKey, taskId);
+    showToast('å®¸æå½å¨å å¢¦é?);
+  } else {
+    setTaskRecord(dateKey, taskId, Date.now(), 25 * 60);
+    showToast('é?éµæ³å´±é´æ¬å§é?);
+  }
+  renderCheckinTab();
+  updateStats();
+}
+
+function handleStartTaskTimer(dateKey, taskId) {
+  if (timerState && timerState.type === 'task' && timerState.dateKey === dateKey && timerState.taskId === taskId) {
+    endCurrentTimer(false); return;
+  }
+  startTaskTimer(dateKey, taskId);
+}
+
+// ============ çè®³åé¿å¶ç¶ ============
+function handleBookTimer(bookId) {
+  if (timerState && timerState.type === 'book' && timerState.bookId === bookId) {
+    endCurrentTimer(false); return;
+  }
+  startBookTimer(bookId);
+}
+
+function handleFinishBook(bookId) {
+  if (timerState && timerState.type === 'book' && timerState.bookId === bookId) {
+    endCurrentTimer(false);
+  }
+  const rec = getBookRecord(bookId);
+  if (!rec || !rec.started) {
+    showToast('çå³°åå¯®â¬æ¿®å¬®æ§çè¯²åéåªîçè¯²ç¬');
+    return;
+  }
+  if (rec.finished) {
+    // éæ ¨ç§·éåªî
+    rec.finished = null;
+    setBookRecord(bookId, rec);
+    showToast('å®¸æå½å¨å £î°ç¹å±¾ç£ç?);
+  } else {
+    rec.finished = Date.now();
+    setBookRecord(bookId, rec);
+    showToast('é¦å¸ é­îæ©çè¯²ç¬æ¶â¬éîç´');
+  }
+  renderReadingTab();
+}
+
+// ============ å¨åç ============
 let viewDate = new Date();
 
 function formatDate(d) {
   const now = new Date();
   const diffDays = Math.floor((d - new Date(now.getFullYear(),now.getMonth(),now.getDate())) / 86400000);
-  const dayNames = ['周日','周一','周二','周三','周四','周五','周六'];
-  const str = `${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日 ${dayNames[d.getDay()]}`;
-  if (diffDays === 0) return '📌 今天 · ' + str;
-  if (diffDays === -1) return '昨天 · ' + str;
-  if (diffDays === 1) return '明天 · ' + str;
+  const dayNames = ['éã¦æ£©','éã¤ç«´','éã¤ç°©','éã¤ç¬','éã¥æ´','éã¤ç°²','éã¥å'];
+  const str = `${d.getFullYear()}éª?{d.getMonth()+1}é?{d.getDate()}é?${dayNames[d.getDay()]}`;
+  if (diffDays === 0) return 'é¦æ¶ æµ å©ã è·¯ ' + str;
+  if (diffDays === -1) return 'éã¥ã è·¯ ' + str;
+  if (diffDays === 1) return 'éåº¡ã è·¯ ' + str;
   return str;
 }
 
-function shiftDate(delta) {
-  viewDate.setDate(viewDate.getDate() + delta);
-  renderCheckinTab();
-}
+function shiftDate(delta) { viewDate.setDate(viewDate.getDate() + delta); renderCheckinTab(); }
 
 function renderCheckinTab() {
   const dk = `${viewDate.getFullYear()}-${String(viewDate.getMonth()+1).padStart(2,'0')}-${String(viewDate.getDate()).padStart(2,'0')}`;
   document.getElementById('dateDisplay').textContent = formatDate(viewDate);
-
   const tasks = buildTasks(viewDate);
   const weekend = isWeekend(viewDate);
   const module = getModuleForDate(viewDate);
 
   let sections = {};
-  tasks.forEach(t => {
-    if (!sections[t.section]) sections[t.section] = [];
-    sections[t.section].push(t);
-  });
+  tasks.forEach(t => { if (!sections[t.section]) sections[t.section] = []; sections[t.section].push(t); });
 
   let html = '';
   if (!weekend && module) {
     html += `<div class="card" style="text-align:center;padding:12px;">
-      <span style="font-size:13px;color:var(--primary);font-weight:600;">📅 工作日模块轮换：周${['一','二','三','四','五'][getDayOfWeek(viewDate)-1]} — <span style="color:#e54545;">${module}</span></span>
-    </div>`;
+      <span style="font-size:13px;color:var(--primary);font-weight:600;">é¦æ® å®¸ã¤ç¶éã¦Äé§æ¥çé¹î®ç´°é?{['æ¶â¬','æµ?,'æ¶?,'é¥?,'æµ?][getDayOfWeek(viewDate)-1]} é¥?<span style="color:#e54545;">${module}</span></span></div>`;
   }
   if (weekend) {
     html += `<div class="card" style="text-align:center;padding:12px;">
-      <span style="font-size:13px;color:var(--warning);font-weight:600;">🎯 周末黄金备考时间，把握整块时间深度学习</span>
-    </div>`;
+      <span style="font-size:13px;color:var(--warning);font-weight:600;">é¦å¹ éã¦æ¹¯æ¦å¯å¾æ¾¶åªâ¬å©æ¤éè¾¾ç´é¶å©å½éææ½¡éå æ£¿å¨£åå®³çï¸¿ç¯</span></div>`;
   }
 
   for (let [section, sectionTasks] of Object.entries(sections)) {
@@ -609,25 +758,22 @@ function renderCheckinTab() {
       const checked = isChecked(dk, t.id);
       const dur = getDuration(dk, t.id);
       const optionalClass = t.optional ? ' style="opacity:0.65"' : '';
+      const isTiming = timerState && timerState.type==='task' && timerState.dateKey===dk && timerState.taskId===t.id;
 
-      // 是否正在计时
-      const isTiming = timerState && timerState.dateKey === dk && timerState.taskId === t.id;
-
-      // 计时按钮
       let timerBtnHtml = '';
       if (isTiming) {
         const elapsed = Math.round((Date.now() - timerState.startTime) / 1000);
-        timerBtnHtml = `<button class="timer-btn stop" onclick="handleStartTimer('${dk}','${t.id}')"><span class="live-dot"></span>${formatDuration(elapsed)}</button>`;
+        timerBtnHtml = `<button class="timer-btn stop" onclick="handleStartTaskTimer('${dk}','${t.id}')"><span class="live-dot"></span>${formatDuration(elapsed)}</button>`;
       } else if (checked) {
         timerBtnHtml = `<span class="task-duration-tag visible">${formatDurationLong(dur)}</span>`;
       } else {
-        timerBtnHtml = `<button class="timer-btn start" onclick="handleStartTimer('${dk}','${t.id}')">开始计时</button>`;
+        timerBtnHtml = `<button class="timer-btn start" onclick="handleStartTaskTimer('${dk}','${t.id}')">å¯®â¬æ¿®å¬­î¸é?/button>`;
       }
 
-      html += `<div class="task-item${checked ? ' completed' : ''}${isTiming ? ' timing' : ''}"${optionalClass}>
-        <div class="task-check${checked ? ' checked' : ''}" onclick="handleCheck('${dk}','${t.id}')">✓</div>
+      html += `<div class="task-item${checked?' completed':''}${isTiming?' timing':''}"${optionalClass}>
+        <div class="task-check${checked?' checked':''}" onclick="handleCheck('${dk}','${t.id}')">é?/div>
         <div class="task-info">
-          <div class="task-name"><span style="margin-right:3px;">${t.icon||''}</span>${t.name}${t.optional ? ' <span style="font-size:10px;color:#999;">(可选)</span>' : ''}</div>
+          <div class="task-name"><span style="margin-right:3px;">${t.icon||''}</span>${t.name}${t.optional?' <span style="font-size:10px;color:#999;">(éîâ¬?</span>':''}</div>
           <div class="task-desc">${t.desc}</div>
           <div class="task-meta"><span class="task-time-tag">${t.time}</span></div>
         </div>
@@ -640,10 +786,8 @@ function renderCheckinTab() {
   const completed = tasks.filter(t => !t.optional && isChecked(dk, t.id)).length;
   const total = getTotalNonOptional(tasks);
   html += `<div class="card" style="text-align:center;">
-    <span style="font-size:13px;">当日完成：<strong style="color:var(--success);">${completed}</strong> / ${total} 项</span>
-    <div class="week-progress-bar" style="margin-top:6px;">
-      <div class="week-progress-fill" style="width:${total>0?(completed/total*100):0}%"></div>
-    </div>
+    <span style="font-size:13px;">è¤°æ´æ£©ç¹å±¾åé?strong style="color:var(--success);">${completed}</strong> / ${total} æ¤¤?/span>
+    <div class="week-progress-bar" style="margin-top:6px;"><div class="week-progress-fill" style="width:${total>0?(completed/total*100):0}%"></div></div>
   </div>`;
 
   document.getElementById('taskContainer').innerHTML = html;
@@ -651,7 +795,81 @@ function renderCheckinTab() {
 
 function getTotalNonOptional(tasks) { return tasks.filter(t => !t.optional).length; }
 
-// ============ 统计 ============
+// ============ çè®³åçâ³åå¨åç ============
+function renderReadingTab() {
+  const readingData = loadReadingData();
+  const totalBooks = BOOK_LIST.length;
+  let finishedCount = 0;
+  let totalDuration = 0;
+  let inProgress = 0;
+
+  BOOK_LIST.forEach(b => {
+    const rec = readingData[b.id];
+    if (rec) {
+      totalDuration += (rec.durationSec || 0);
+      if (rec.finished) finishedCount++;
+      else if (rec.started) inProgress++;
+    }
+  });
+
+  document.getElementById('booksRead').textContent = finishedCount;
+  document.getElementById('booksProgress').textContent = Math.round(finishedCount/totalBooks*100)+'%';
+  document.getElementById('readingTotalTime').textContent = formatDurationLong(totalDuration);
+  document.getElementById('booksReading').textContent = inProgress;
+  document.getElementById('readingBar').style.width = (finishedCount/totalBooks*100)+'%';
+
+  // é¸å¤ç°éåç²å¨åç
+  let layers = {};
+  BOOK_LIST.forEach(b => {
+    if (!layers[b.layer]) layers[b.layer] = { class: b.layerClass, books: [] };
+    layers[b.layer].books.push(b);
+  });
+
+  let html = '';
+  for (let [layerName, layerData] of Object.entries(layers)) {
+    html += `<div class="book-layer-title ${layerData.class}">é¦æ ${layerName}</div>`;
+    layerData.books.forEach(b => {
+      const rec = readingData[b.id];
+      const isFinished = rec && rec.finished;
+      const isReadingNow = timerState && timerState.type==='book' && timerState.bookId===b.id;
+      const dur = rec ? (rec.durationSec||0) : 0;
+      const hasStarted = rec && rec.started;
+
+      let btnHtml = '';
+      if (isReadingNow) {
+        const elapsed = Math.round((Date.now() - timerState.startTime) / 1000);
+        btnHtml = `<button class="book-read-btn stop-btn" onclick="handleBookTimer('${b.id}')"><span class="live-dot"></span>${formatDuration(elapsed)}</button>`;
+      } else if (isFinished) {
+        btnHtml = '';
+      } else {
+        btnHtml = `<button class="book-read-btn start-btn" onclick="handleBookTimer('${b.id}')">å¯®â¬æ¿®å¬®æ§ç?/button>`;
+      }
+
+      let metaHtml = '';
+      if (dur > 0) metaHtml += `<span class="book-duration-tag">é¦æ ${formatDurationLong(dur)}</span>`;
+      if (isFinished) {
+        const finDate = new Date(rec.finished);
+        metaHtml += `<span class="book-finished-tag">é?${finDate.getMonth()+1}/${finDate.getDate()}çè¯²ç¬</span>`;
+      } else if (hasStarted) {
+        metaHtml += `<span class="book-tag">éå°î°æ¶?/span>`;
+      }
+
+      html += `<div class="book-item${isFinished?' finished':''}${isReadingNow?' reading':''}">
+        <div class="book-status-icon${isFinished?' finished':''}" onclick="handleFinishBook('${b.id}')">${isFinished?'é?:''}</div>
+        <div class="book-info">
+          <div class="book-title">${b.title}</div>
+          <div class="book-author">${b.author}</div>
+          <div class="book-desc">${b.desc}</div>
+          <div class="book-meta">${metaHtml}</div>
+        </div>
+        ${btnHtml}
+      </div>`;
+    });
+  }
+  document.getElementById('bookListContainer').innerHTML = html;
+}
+
+// ============ ç¼ç»î¸ ============
 function renderStats() {
   const data = loadData();
   const now = new Date();
@@ -665,21 +883,16 @@ function renderStats() {
   let weekTotal = 0, weekDone = 0;
   let totalDays = Object.keys(data).length;
 
-  // 连续打卡
   let streak = 0;
   const checkDate = new Date(now);
   for (let i = 0; i < 365; i++) {
     const dk = `${checkDate.getFullYear()}-${String(checkDate.getMonth()+1).padStart(2,'0')}-${String(checkDate.getDate()).padStart(2,'0')}`;
-    if (data[dk] && Object.keys(data[dk]).length > 0) {
-      streak++;
-    } else if (i === 0) {
-      checkDate.setDate(checkDate.getDate() - 1);
-      continue;
-    } else { break; }
+    if (data[dk] && Object.keys(data[dk]).length > 0) { streak++; }
+    else if (i === 0) { checkDate.setDate(checkDate.getDate() - 1); continue; }
+    else break;
     checkDate.setDate(checkDate.getDate() - 1);
   }
 
-  // 本周统计
   for (let i = 0; i < 7; i++) {
     const d = new Date(monday);
     d.setDate(monday.getDate() + i);
@@ -687,9 +900,7 @@ function renderStats() {
     const tasks = buildTasks(d);
     const total = getTotalNonOptional(tasks);
     weekTotal += total;
-    if (data[dk]) {
-      tasks.forEach(t => { if (!t.optional && data[dk][t.id]) weekDone++; });
-    }
+    if (data[dk]) { tasks.forEach(t => { if (!t.optional && data[dk][t.id]) weekDone++; }); }
   }
   const weekRate = weekTotal > 0 ? Math.round(weekDone / weekTotal * 100) : 0;
 
@@ -698,14 +909,13 @@ function renderStats() {
   document.getElementById('streakDays').textContent = streak;
   document.getElementById('streakCount').textContent = streak;
   document.getElementById('weekBar').style.width = weekRate + '%';
-  document.getElementById('weekText').textContent = `${weekDone} / ${weekTotal} 任务完成`;
+  document.getElementById('weekText').textContent = `${weekDone} / ${weekTotal} æµ è¯²å§ç¹å±¾å`;
 
-  // ===== 模块时长：基于实际计时数据 =====
   const moduleSeconds = {};
   const moduleColors = {
-    '言语理解':'#1a73e8', '判断推理':'#e54545', '数量关系':'#f5a623',
-    '资料分析':'#0d9e6c', '申论':'#8e44ad', '行测综合':'#e67e22',
-    '时政常识':'#3498db', '错题总结':'#7f8c8d', '模考':'#e91e63'
+    'ç·â¬çî æç?:'#1a73e8', 'éãæéºã§æ':'#e54545', 'éä¼´åºéå´é´':'#f5a623',
+    'ç§å¬æ¡éåç½':'#0d9e6c', 'é¢å® î':'#8e44ad', 'çå±¾ç¥´ç¼çæ':'#e67e22',
+    'éèµæç¯æ­ç':'#3498db', 'é¿æ¬î½é¬è¤ç²¨':'#7f8c8d', 'å¦¯Â¤â¬?:'#e91e63'
   };
 
   const allDates = Object.keys(data);
@@ -715,22 +925,21 @@ function renderStats() {
     const d = new Date(y, m-1, day);
     const tasks = buildTasks(d);
     const dayData = data[dk];
-
     Object.keys(dayData).forEach(taskId => {
       const val = dayData[taskId];
       const dur = typeof val === 'number' ? 25 * 60 : (val.dur || 25 * 60);
       const task = tasks.find(t => t.id === taskId);
-      let cat = '行测综合';
+      let cat = 'çå±¾ç¥´ç¼çæ';
       if (task) {
         const nm = task.name;
-        if (nm.includes('时政') || nm.includes('晨读')) cat = '时政常识';
-        else if (nm.includes('言语')) cat = '言语理解';
-        else if (nm.includes('判断')) cat = '判断推理';
-        else if (nm.includes('数量')) cat = '数量关系';
-        else if (nm.includes('资料')) cat = '资料分析';
-        else if (nm.includes('申论')) cat = '申论';
-        else if (nm.includes('错题')) cat = '错题总结';
-        else if (nm.includes('模考')) cat = '模考';
+        if (nm.includes('éèµæ')||nm.includes('éã¨î°')) cat='éèµæç¯æ­ç';
+        else if (nm.includes('ç·â¬ç?)) cat='ç·â¬çî æç?;
+        else if (nm.includes('éãæ')) cat='éãæéºã§æ';
+        else if (nm.includes('éä¼´åº')) cat='éä¼´åºéå´é´';
+        else if (nm.includes('ç§å¬æ¡')) cat='ç§å¬æ¡éåç½';
+        else if (nm.includes('é¢å® î')) cat='é¢å® î';
+        else if (nm.includes('é¿æ¬î½')) cat='é¿æ¬î½é¬è¤ç²¨';
+        else if (nm.includes('å¦¯Â¤â¬?)) cat='å¦¯Â¤â¬?;
       }
       moduleSeconds[cat] = (moduleSeconds[cat] || 0) + dur;
     });
@@ -741,42 +950,36 @@ function renderStats() {
 
   let barsHtml = '';
   if (activeModules.length === 0) {
-    barsHtml = '<div style="text-align:center;color:var(--text-secondary);padding:20px;">暂无打卡数据</div>';
+    barsHtml = '<div style="text-align:center;color:var(--text-secondary);padding:20px;">éåæ£¤éµæ³å´±éçåµ</div>';
   } else {
     activeModules.forEach(([name, sec]) => {
       const pct = Math.round(sec / maxSec * 100);
       const color = moduleColors[name] || '#1a73e8';
       const min = Math.round(sec / 60);
       barsHtml += `<div class="module-bar">
-        <div class="module-bar-label"><span>${name}</span><span>${min}分钟</span></div>
+        <div class="module-bar-label"><span>${name}</span><span>${min}éåæ</span></div>
         <div class="module-bar-track"><div class="module-bar-fill" style="width:${pct}%;background:${color};"></div></div>
       </div>`;
     });
   }
   document.getElementById('moduleBars').innerHTML = barsHtml;
 
-  // 近7天日历
-  let calHtml = '';
+  // æ©?æ¾¶âæ£©é?  let calHtml = '';
   for (let i = 6; i >= 0; i--) {
-    const d = new Date(now);
-    d.setDate(now.getDate() - i);
+    const d = new Date(now); d.setDate(now.getDate() - i);
     const dk = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
     const tasks = buildTasks(d);
     const total = getTotalNonOptional(tasks);
     let done = 0;
-    if (data[dk]) {
-      tasks.forEach(t => { if (!t.optional && data[dk][t.id]) done++; });
-    }
+    if (data[dk]) { tasks.forEach(t => { if (!t.optional && data[dk][t.id]) done++; }); }
     const pct = total > 0 ? done / total : 0;
     let bgColor = '#e8ecf1';
-    if (pct >= 1) bgColor = '#0d9e6c';
-    else if (pct >= 0.5) bgColor = '#f5a623';
-    else if (pct > 0) bgColor = '#e8c0c0';
+    if (pct >= 1) bgColor = '#0d9e6c'; else if (pct >= 0.5) bgColor = '#f5a623'; else if (pct > 0) bgColor = '#e8c0c0';
     const isToday = dk === todayKey();
     calHtml += `<div style="text-align:center;">
       <div style="font-size:10px;color:var(--text-secondary);">${d.getMonth()+1}/${d.getDate()}</div>
-      <div style="width:34px;height:34px;border-radius:10px;background:${bgColor};margin:2px auto;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#fff;${isToday?'box-shadow:0 0 0 3px '+bgColor+'40;':''}">${done>0?done:'·'}</div>
-      <div style="font-size:10px;color:var(--text-secondary);">${['一','二','三','四','五','六','日'][(d.getDay()+6)%7]}</div>
+      <div style="width:34px;height:34px;border-radius:10px;background:${bgColor};margin:2px auto;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#fff;${isToday?'box-shadow:0 0 0 3px '+bgColor+'40;':''}">${done>0?done:'è·¯'}</div>
+      <div style="font-size:10px;color:var(--text-secondary);">${['æ¶â¬','æµ?,'æ¶?,'é¥?,'æµ?,'é?,'é?][(d.getDay()+6)%7]}</div>
     </div>`;
   }
   document.getElementById('calendarGrid').innerHTML = calHtml;
@@ -784,7 +987,7 @@ function renderStats() {
 
 function updateStats() { renderStats(); }
 
-// ============ Tab切换 ============
+// ============ Tabéå¨å´² ============
 function switchTab(tabId) {
   document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
   document.getElementById(tabId).classList.add('active');
@@ -793,6 +996,7 @@ function switchTab(tabId) {
 
   if (tabId === 'tab-stats') renderStats();
   if (tabId === 'tab-checkin') renderCheckinTab();
+  if (tabId === 'tab-reading') renderReadingTab();
 }
 
 // ============ Toast ============
@@ -804,8 +1008,9 @@ function showToast(msg) {
   t._timeout = setTimeout(() => t.classList.remove('show'), 1800);
 }
 
-// ============ 初始化 ============
+// ============ éæ¿îé?============
 renderCheckinTab();
+renderReadingTab();
 updateStats();
 </script>
 </body>
